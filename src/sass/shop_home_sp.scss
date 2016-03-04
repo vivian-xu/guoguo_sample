@@ -1,0 +1,166 @@
+@import "compass/css3/inline-block";
+@import "compass/css3/box-sizing";
+@import "compass/css3/border-radius";
+
+/*  content  */
+$shop_name_width: 12rem;
+$shop_name_height: 11rem;
+$products_name_height: 2.5;
+$_class_title_fs: 16px;
+$product_image_height: auto;
+$product_name_fs: 14px;
+$product_name_height: $product_name_fs * 3;
+$product_item_height: 220px;
+
+body {
+    background-color: #eee;
+    min-width: 270px;
+
+}
+
+/*  content  */
+.block-content{
+    margin: 0 auto;
+    min-height: 35rem;
+    text-align: center;
+}
+
+//  nav
+.nav-link span { margin: .5rem;}
+/* banner & name & shop-info */
+/* 图片长宽比 32:25  */
+.shop-banner {
+    position: relative;
+    max-width: 100%;
+    background: #fff;
+    font-size: 10px;
+    line-height: 1.5;
+
+    > .banner_bg {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.shop_name {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -$shop_name_width/2;
+    width: $shop_name_width;
+    height: $shop_name_height;
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+
+    > .avater {
+        width: 4rem;
+        height: 4rem;
+        margin: 1em 0 .5rem 0;
+        background: rgb(255,235,59);  /* test */
+        border: 2px solid #fff;
+        @include border-radius(999px);
+    }
+
+    >.name {
+        font-size: 16px;
+        font-weight: bold;
+    }
+}
+
+.toggle_info {
+    width: 100%;
+    min-height: 3rem;
+    vertical-align: middle;
+
+    .toggle_icon {
+        padding: .5rem;
+        font-size: 20px;
+
+        &:hover { color: red; }
+    }
+    .info_hidden {
+        padding: 12px 26px;
+        text-align: left;
+    }
+}
+/*
+    --Products--
+*/
+
+/* products list */
+.products {
+     background-color: #fff;
+
+    > h3.class-title {
+        margin-top: 1px;
+        padding: 1.5rem .5rem .8rem;
+        color: red;
+        font-size: $_class_title_fs;
+        font-weight: normal;
+        background-color: #fff;
+    }
+
+    > .products-gallery {  /*  ul的 border-bottom 过长的问题  */
+        margin: 0;
+        padding: 0;
+        border-bottom: 1px solid #eee;
+        font-size: 0;
+    }
+}
+
+.products-item {
+    @include inline-block;
+    @include box-sizing( border-box );
+    padding: .5rem;
+    background-color: #fff;
+    width: 50%;
+    min-height: $product_item_height;
+    font-size: 16px;
+
+    &:nth-child(odd) { border-right: 1px #eee solid;}
+    .product_item_link{
+        display: block;
+        color: #000;
+
+        .products-image {
+            width: 100%;
+            height: $product_image_height;
+            background-color: #fff;
+        }
+    }
+}
+
+.products_tag{
+    text-align: left;
+
+    .product-name {
+        overflow: hidden;
+        color: #000;
+        height: $product_name_height;
+        font-size: $product_name_fs;
+    }
+
+    .price {
+        font-size: .8rem;
+
+        .current_price {
+            color: #dc4444;
+            font-size: 1.1rem;
+        }
+
+        .before_price {
+            color: #716C6C;
+            text-decoration: line-through;
+        }
+    }
+}
+
+.item_row {
+    border-bottom: 1px solid #eee;
+    font-size: 16px;
+}
+
+.weui_btn.weui_btn_plain_default {
+    font-size: 16px;
+    border-style: none;
+}

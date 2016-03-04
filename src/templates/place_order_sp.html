@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+ 	<head>
+	<!--- start : Meta  -->
+	<meta charset="utf-8">
+	<meta name="description" content="果果庄园，店铺, 关注，列表">
+	 <!-- start : Mobile Specific  -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style">
+	<meta content="telephone=no" name="format-detection">
+	<!-- end : Mobile Specific  -->
+	<!-- end : Meta -->
+	<title>下单确认</title>
+	<!-- start : css -->
+	<link rel="stylesheet" href="../css/weui.min.css">
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../fonts2/style.css">
+	<link rel="stylesheet" href="../css/nav.css">
+	<link rel="stylesheet" href="../css/place_order_sp.css">
+	<!-- end : css -->
+	<!-- start: javascript -->
+	<script type="text/javascript" src="../js/libraries/jquery.min.js"></script>
+	<!-- end: javascript -->
+	</head>
+	<body>
+
+		<section id="place_order">
+			<a class="product_item clearfix" href="product.min.html">
+			    	<img src="../images/products1.jpg" class="product_avater">
+				<p class="info_right">
+			       <span class="product_name">我是苹果果果果果果果果</span>
+			        规格 : <span class="">通货</span><br/>
+			        ¥ <span class="price"> 0.6/斤 </span>
+			    </p>
+		   	 </a>
+
+			<form action="" method="post" class="weui_cells weui_cells_form">
+				<div class="weui_cell">
+				    <div class="weui_cell_hd">
+				        <label class="weui_label">数量</label>
+				    </div>
+				    <div class="weui_cell count_block">
+					<input id="min" name="" type="button" value="-" class="weui_btn weui_btn_mini weui_btn_primary"/>
+					<input id="num_box" name="goodnum" type="text" value="0"  class="weui_input"/>
+					<input id="add" name="" type="button" value="+"
+					class="weui_btn weui_btn_mini weui_btn_primary" />
+				    </div>
+				</div>
+			    <div class="weui_cell">
+			        <div class="weui_cell_hd">
+			            <label class="weui_label">提货时间</label>
+			        </div>
+			        <div class="weui_cell_bd weui_cell_primary">
+			            <input class="weui_input right" name="time" type="datetime-local" placeholder="请填写提货时间" required="required"/>
+			        </div>
+			    </div>
+			  </form>
+
+			<div class="weui_cells_title">联系人信息</div>
+			<form action="" method="post" class="weui_cells weui_cells_form">
+			    <div class="weui_cell">
+			        <div class="weui_cell_hd">
+			            <label class="weui_label">联系人姓名</label>
+			        </div>
+			        <div class="weui_cell_bd weui_cell_primary">
+			            <input class="weui_input right" type="text" name="name"placeholder="张xx" required="required"/>
+			        </div>
+			    </div>
+			    <div class="weui_cell">
+			        <div class="weui_cell_hd">
+			            <label class="weui_label">联系人电话</label>
+			        </div>
+			        <div class="weui_cell_bd weui_cell_primary">
+			            <input class="weui_input right" type="tel" name="phone" placeholder="180 000 000 00" required="required" />
+			        </div>
+			    </div>
+			</form>
+			<div class="weui_cells_title">备注</div>
+			<form action="" method="post" class="weui_cells weui_cells_form">
+			       <div class="weui_cell">
+			            	<div class="weui_cell_bd weui_cell_primary">
+			                	<textarea class="weui_textarea" placeholder="未添加" rows="4"></textarea>
+			            	</div>
+			       </div>
+			 </form>
+		</section>
+
+		<!-- This is footer-navbar  -->
+		<nav id="footer-nav" class="navbar nav-footer fixed">
+        	    <p class="sum">应付总额：¥
+        	    <span class="sum_price"> 6.20</span></p>
+	            <a class="nav-link order" href="javascript::void(0)">确认预定</a>
+		</nav>
+	</body>
+	<script type="text/javascript" src="../js/nav.min.js"></script>
+</html>

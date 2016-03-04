@@ -1,0 +1,109 @@
+body { background-color: #eee; }
+
+#place_order { margin: 0 ;}
+
+// product
+.order_shop {
+    background-color: #fff;
+    border: 1px none rgb(255, 193, 193);
+    border-style: solid none;
+}
+
+.order_shop {
+    @extend .inshop_icon;
+    margin-top: -1px;
+    padding: 5px;
+
+    .inshop_icon { vertical-align: middle; }
+}
+
+.product_item {
+    display: block;
+    display : -webkit-flex;
+    display : -moz-box;
+    display : -ms-flexbox;
+    display : flex;
+    -webkit-align-items: flex-start;
+       -moz-box-align: flex-start;
+        -ms-flex-align: flex-start;
+            align-items: flex-start;
+    padding: 10px 15px;
+    background-color: #fff;
+    border: 1px none #eee;
+    border-style: none none solid none;
+
+    .product_avater {
+        width: 35%;
+        max-width: 300px;
+        margin-right: 5%;
+    }
+
+    .info_right {
+        overflow: hidden;
+        -webkit-flex : 1;
+          -moz-box-flex: 1;
+             -ms-flex: 1;
+                 flex: 1;
+        color: #000;
+
+        .product_name {
+            display: block;
+            font-size: 16px;
+            font-weight: bold;
+        }
+    }
+}
+
+.weui_label { width: 5em; }
+.weui_input.right { text-align: right; }
+
+/* nav */
+.form_nav {
+    background-color: rgba(239, 112, 112, 0.9);
+
+    .nav-link,
+    .nav-name {
+        color: #fff;
+        font-weight: normal;
+    }
+}
+.nav-footer.navbar {
+    text-align: right;
+    padding: .5rem;
+    border-top: 1px #eee solid;
+    background-color: #fff;
+ }
+.sum {
+    display: inline-block;
+    -moz-box-sizing : border-box;
+         box-sizing : border-box;
+     vertical-align: middle;
+    padding: 5px;
+    font-size: 10px;
+    color: #655656;
+
+    .sum_price {
+        font-size: 16px;
+        color: red;
+    }
+}
+.nav-link.order {
+    width: auto;
+    padding: .5rem 1rem;
+    margin: 0 1rem  0 .5rem;
+    background: rgb(255, 0, 0);
+    border-radius: 5px;
+    font-weight: 800;
+}
+
+//  数量选择
+.weui_cell.count_block {
+    &:before { content: none;}
+}
+
+#min,
+#add {
+    font-size: 16px;
+    width: 3rem;
+}
+#num_box { text-align: center; }
