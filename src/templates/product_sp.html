@@ -17,16 +17,11 @@
     <!-- end: Mobile Specific -->
 
     <!-- start: CSS -->
-    <!--  Fonts CSS 文件 -->
-    <link rel="stylesheet" href="../fonts2/style.css">
-    <link rel="stylesheet" href="../fonts4/style.css">
     <!--  Reset CSS 文件 -->
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/weui.min.css">
-    <!--
-    Our own stylesheet.
-    -->
     <link rel="stylesheet" href="../css/product_sp.css">
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.css">
     <!-- end: CSS -->
     <!-- start: javascript -->
     <script type="text/javascript" src="../js/libraries/jquery.min.js"></script>
@@ -34,41 +29,27 @@
 </head>
 <body>
     <section id="product">
+<!-- banner -->
         <div class="product_banner">
-            <img class="banner_bg" src="../images/products1.jpg"/>
+            <img class="banner_bg" src="../images/product_bg.jpg"/>
         </div>
-        <div class="product_tag">
-            <p class="product_name">我是水果果果果我是水果果果果我是水果果果果我是水果果果果我是水果果果果我是水果果果果</p>
-            <p class="price"> ¥
-                <span class="current_price">300/斤</span>
-                <span class="before_price">¥300/斤</span>
-            </p>
-        </div>
-
-        <!--
-
-                    product_detail
-
-         -->
-
-        <div class="weui_cells weui_cells_access">
-            <a class="weui_cell" href="product_detail_sp.min.html">
-                <div class="weui_cell_bd weui_cell_primary">
-                    <p>商品详情</p>
+<!-- content -->
+        <div class="block-content">
+            <div class="products">
+                <div class="product_tag">
+                    <p class="product_name">樱桃</p>
+                    <p class="price"> 每斤约20元<br/>
+                        <span class="ps"> ( 价格根据季节变动 ) </span>
+                    </p>
                 </div>
-                <div class="weui_cell_ft">
+                <div class="product_detail">
+                    <p class="detail_title"><i class="fa fa-calendar-o"></i> 简介</p>
+                    <p class="detail_content">樱桃（学名：Cerasus pseudocerasus），是某些李属类植物的统称，包括樱 桃亚属、酸樱桃亚属、桂樱亚属等。乔木，高2-6米，树皮灰白色。小枝灰 褐色，嫩枝绿色，无毛或被疏柔毛。冬芽卵形，无毛。 果实可以作为水果食用，外表色泽鲜艳、晶莹美丽、红如玛瑙，黄如凝脂， 果实富含糖、蛋白质、维生素及钙、铁、磷、钾等多种元素。</p>
                 </div>
-            </a>
-            <a class="weui_cell" href="javascript:;">
-                <div class="weui_cell_bd weui_cell_primary">
-                    <p>商品图片</p>
+                <div class="button_sp_area">
+                    <a href="place_order_sp.min.html" class="weui_btn weui_btn_warn order_btn">购买</a>
                 </div>
-                <div class="weui_cell_ft">
-                </div>
-            </a>
-        </div>
-        <div class="button_sp_area">
-            <a href="place_order_sp.min.html" class="weui_btn weui_btn_primary order_btn">立即预订</a>
+            </div>
         </div>
     </section>
 </body>

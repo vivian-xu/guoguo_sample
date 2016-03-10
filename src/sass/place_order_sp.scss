@@ -1,45 +1,88 @@
-body { background-color: #eee; }
+@import "compass/css3/box-sizing";
+@import "compass/css3/border-radius";
+@import "compass/css3/inline-block";
 
-#place_order { margin: 0 ;}
+html {
+    background-color: #e9f1f2;
+}
 
-// product
-.order_shop {
+.order_list {
+    width: 96%;
+    margin: .77em auto;
+    @include border-radius(4px);
     background-color: #fff;
-    border: 1px none rgb(255, 193, 193);
-    border-style: solid none;
+    box-shadow:0px 2px 4px rgba(151, 162, 164, 0.45);
 }
 
-.order_shop {
-    @extend .inshop_icon;
-    margin-top: -1px;
-    padding: 5px;
+// shop
+.come_shop,
+.product_item { padding: 10px 15px;}
 
-    .inshop_icon { vertical-align: middle; }
+.come_shop {
+    font-size: 16px;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    vertical-align: middle;
+    border-bottom: 1px solid #e9f1f2;
+
+    .shop_name {
+        @include inline-block;
+        -webkit-flex: 1;
+           -moz-box-flex: 1;
+            -ms-flex: 1;
+                flex: 1;
+        -ms-flex-item-align: center;
+            -webkit-align-self: center;
+                align-self: center;
+        vertical-align: middle;
+        width: 80%;
+    }
+
+    .shop_head {
+        vertical-align: middle;
+        width: 2.5rem;
+        height: 2.5rem;
+    }
 }
-
+// product
 .product_item {
-    display: block;
     display : -webkit-flex;
     display : -moz-box;
     display : -ms-flexbox;
     display : flex;
-    -webkit-align-items: flex-start;
-       -moz-box-align: flex-start;
-        -ms-flex-align: flex-start;
-            align-items: flex-start;
-    padding: 10px 15px;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+
+    vertical-align: middle;
     background-color: #fff;
-    border: 1px none #eee;
-    border-style: none none solid none;
+    border-bottom: 1px solid #eee;
 
     .product_avater {
-        width: 35%;
+        vertical-align: middle;
+        width: 23%;
         max-width: 300px;
+        // height: 23vw;
+        height:78px;
         margin-right: 5%;
     }
 
+    .info_center,
     .info_right {
-        overflow: hidden;
+      overflow: hidden;
+     @include inline-block;
+     vertical-align: middle;
+     width: 35%;
+    }
+
+    .info_center {
         -webkit-flex : 1;
           -moz-box-flex: 1;
              -ms-flex: 1;
@@ -52,58 +95,102 @@ body { background-color: #eee; }
             font-weight: bold;
         }
     }
-}
 
-.weui_label { width: 5em; }
-.weui_input.right { text-align: right; }
+    .info_right {
+        -webkit-flex : 1;
+          -moz-box-flex: 1;
+             -ms-flex: 1;
+                 flex: 1;
+        text-align: right;
 
-/* nav */
-.form_nav {
-    background-color: rgba(239, 112, 112, 0.9);
+        span { display: block; }
 
-    .nav-link,
-    .nav-name {
-        color: #fff;
-        font-weight: normal;
+        .current_price {
+            font-size: 16px;
+            color: #ff5454 ;
+        }
+
+        .before_price {
+            text-decoration: line-through;
+            font-size: 12px;
+            color: #626262;
+        }
+        .count_block {
+            vertical-align: middle;
+        }
     }
 }
-.nav-footer.navbar {
-    text-align: right;
-    padding: .5rem;
-    border-top: 1px #eee solid;
+
+#min,
+#add {
+    vertical-align: middle;
+    font-size: 24px;
+    color: #000;
     background-color: #fff;
- }
-.sum {
+    padding: 0 3px;
+}
+
+ // input type="text" ,与 input type="btn" 不是中线对奇。 将  type="text " 的 margin-top设定一定的值。
+
+#num_box {
+    vertical-align: middle;
+    text-align: center;
+    width: 40%;
+    margin-top: 5px;
+    border: 1px solid rgba( 0, 0, 0, 0.2 );
+   @include border-radius( 4px );
+}
+
+
+// form
+.weui_cells_title {
+    padding-top: .77em;
+    color:#000;
+    font-size: 16px;
+}
+
+.order_list .weui_label {
+    color: rgb(65,62,62);
+    width: 5em;
+}
+
+.weui_input.right {
+    color: #000;
+    text-align: right;
+}
+
+.note_title {
+    -webkit-align-self: flex-start;
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+}
+
+.weui_textarea {
+    background-color: rgba( 0, 0, 0, 0.05 );
+    @include border-radius( 2px);
+}
+
+.sum_price {
     display: inline-block;
     -moz-box-sizing : border-box;
          box-sizing : border-box;
      vertical-align: middle;
     padding: 5px;
-    font-size: 10px;
-    color: #655656;
+    font-size: 16px;
+    color: rgb(254,72,72);
+}
 
-    .sum_price {
-        font-size: 16px;
-        color: red;
-    }
+.weui_cell .weui_cell_ft.order_btn {
+    color: #fff;
+    font-size: 16px;
+    padding: .6rem 4rem;
+    background-color: rgb( 254, 72, 72);
+    @include border-radius( 4px);
 }
-.nav-link.order {
-    width: auto;
-    padding: .5rem 1rem;
-    margin: 0 1rem  0 .5rem;
-    background: rgb(255, 0, 0);
-    border-radius: 5px;
-    font-weight: 800;
-}
+
 
 //  数量选择
 .weui_cell.count_block {
-    &:before { content: none;}
+     &:before { content: none;}
 }
 
-#min,
-#add {
-    font-size: 16px;
-    width: 3rem;
-}
-#num_box { text-align: center; }

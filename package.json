@@ -1,42 +1,46 @@
 {
-  "name": "guoguo_sample",
+  "name": "guoguoweb",
   "version": "1.0.0",
-  "description": "果果庄园重新开发简单版本",
+  "description": "This is guoguofarm store in mobile-web.",
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
-      "gulp-autoprefixer": "^3.1.0",
-      "gulp-concat": "^2.6.0",
-      "gulp-connect": "^2.3.1",
-      "gulp-htmlmin": "^1.3.0",
-      "gulp-if": "^2.0.0",
-      "gulp-imagemin": "^2.4.0",
-      "gulp-jshint": "^2.0.0",
-      "gulp-rename": "^1.2.2",
-      "gulp-ruby-sass": "^2.0.6",
-      "gulp-sass": "^2.2.0",
-      "gulp-sourcemaps": "^1.6.0",
-      "gulp-uglify": "^1.5.2",
-      "gulp-util": "^3.0.7",
-      "http-server": "^0.9.0",
-      "imagemin-pngquant": "^4.2.2",
-      "jshint": "^2.9.1"
-    },
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-connect": "^2.3.1",
+    "gulp-htmlmin": "^1.3.0",
+    "gulp-if": "^2.0.0",
+    "gulp-imagemin": "^2.4.0",
+    "gulp-jshint": "^2.0.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-ruby-sass": "^2.0.6",
+    "gulp-sass": "^2.2.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^1.5.2",
+    "gulp-util": "^3.0.7",
+    "http-server": "^0.9.0",
+    "imagemin-pngquant": "^4.2.2",
+    "jshint": "^2.9.1",
+    "weui": "^0.4.0"
+  },
   "scripts": {
     "start": "http-server -a 0.0.0.0 -p 8000",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install": "make && make install"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/vivian-xu/guoguo_sample.git"
+    "url": "git+https://github.com/vivian-xu/guoguofarm.git"
   },
   "keywords": [
-    "果果"
+    "guoguofarm"
   ],
   "author": "vivian-xu",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/vivian-xu/guoguo_sample/issues"
+    "url": "https://github.com/vivian-xu/guoguofarm/issues"
   },
-  "homepage": "https://github.com/vivian-xu/guoguo_sample#readme"
+  "homepage": "https://github.com/vivian-xu/guoguofarm#readme"
 }

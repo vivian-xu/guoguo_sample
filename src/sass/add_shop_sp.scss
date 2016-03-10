@@ -1,0 +1,83 @@
+@import './setOnepx';
+body {
+    background-color: #fbf9fe;
+}
+#add_shop { margin: 2.5rem 0 3rem 0; }
+
+// chose
+#footer-nav-save .nav-item {
+    width: 100%;
+}
+
+#add_shop .weui_cell_ft.image_icon {
+    height: 50px;
+
+    &::after {
+        top: initial;
+        bottom: 50%;
+        margin-bottom: -4px;
+    }
+}
+
+.warning { color:  #9e9b9b; }
+
+#add_input::before {
+    @include setTopLine(#d9d9d9);
+}
+
+#actionSheet_wrap a.add_class_btn {
+    display: block;
+    color: red;
+}
+
+// key frames
+
+@keyframes slideIn {
+    from {
+        -webkit-transform : translate3d( 100%, 0, 0);
+                transform : translate3d( 100%, 0, 0);
+        opacity: 0;
+    }
+    to {
+        -webkit-transform: translate3d( 0, 0, 0 );
+                transform: translate3d( 0, 0, 0 );
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes slideOut {
+    from {
+        -webkit-transform: translate3d( 0, 0, 0);
+                transform: translate3d( 0, 0, 0);
+        opacity: 1;
+    }
+    to {
+        -webkit-transform: translate3d( -100%, 0, 0);
+                transform: translate3d( -100%, 0, 0);
+        opacity: 0;
+    }
+}
+
+@keyframes slideOut {
+    from {
+        -webkit-transform: translate3d( 0, 0, 0);
+                transform: translate3d( 0, 0, 0);
+        opacity: 1;
+    }
+    to {
+        -webkit-transform: translate3d( -100%, 0, 0);
+                transform: translate3d( -100%, 0, 0);
+        opacity: 0;
+    }
+}
+
+// animation
+.slideIn {
+    -webkit-animation: slideIn 3s forwards;
+        animation: slideIn 3s forwards;
+}
+
+.slideOut {
+    -webkit-animation: slideOut 3s forwards;
+            animation: slideOut 3s forwards;
+}

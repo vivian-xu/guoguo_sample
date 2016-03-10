@@ -1,0 +1,103 @@
+@import "compass/css3/inline-block";
+@import "compass/css3/box-sizing";
+@import "./setOnepx";
+
+body {
+    min-width: 270px;
+    background-color: #fbf9fe;
+}
+    /* -- order_info -- */
+.order_info p,
+.client_info p {
+    font-size: 14px ;
+    line-height: 1.5;
+    color: #615B5B;
+}
+
+p[class*= "state_"] {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.state_done { color: #13B113; }
+.state_doing { color: #f00; }
+
+.order_list {
+    overflow: hidden;
+    border-bottom: 5px solid #fbf9fe;
+
+    .weui_btn { background-color: transparent;}
+}
+
+.sum {
+    border-bottom: 1px solid #eee;
+
+    .sum_price {
+        font-size: 16px;
+        color: red;
+    }
+}
+
+//***********
+
+.weui_btn {
+    color: #EF4F4F;
+    background-color: #eee;
+    width: 100%;
+    font-size: 16px;
+
+    &:active {background-color: #e0dfdf;}
+    .active {background-color: #e0dfdf; }
+}
+
+.weui_panel.client_info:after { content: none; }
+
+.client_info .client_name { font-weight: bold; }
+
+.weui_media_box .weui_media_title { font-size: 16px; }
+
+.weui_media_box.weui_media_appmsg {
+    .weui_media_hd {
+        width: 80px;
+        height: 80px;
+    }
+    .weui_media_appmsg_thumb {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.order_num {
+    font-size: 14px;
+    color: #888;
+}
+
+.weui_cell_ft  { color: #000; }
+.weui_panel_hd {padding-bottom: 14px;}
+.weui_panel_hd + .weui_cell::before { content: none;}
+
+.weui_panel_hd + .weui_cell::after {
+    @include setBottomLine( #C7C7C7 );
+    left: 15px;
+}
+/* -- get_code -- */
+.get_code {
+    text-align: center;
+    padding: 10px 0;
+
+    .get_num,
+    .code { margin: .5rem; }
+
+    .get_num {
+        color: red;
+        font-weight:bold;
+    }
+
+    .code {
+        width: 60%;
+        max-width: 460px;
+    }
+}
+
+
+
