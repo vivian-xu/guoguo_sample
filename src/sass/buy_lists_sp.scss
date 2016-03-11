@@ -1,0 +1,123 @@
+@import "compass/css3/inline-block";
+@import "compass/css3/box-sizing";
+@import "compass/css3/border-radius";
+@import "./setOnepx";
+@import "./wrapBlock";
+
+body { min-width: 277px; }
+
+.order_num,
+.product_item { padding: 10px 15px;}
+
+.order_num + .product_item { padding-top: 0; }
+
+.order_time {
+    padding: .5rem 15px;
+
+    .shop_name { font-size: 12px; }
+}
+
+.order_num,
+.order_time {
+    font-size: 10px;
+    color: #737070;
+}
+
+.order_time { border-bottom: 1px solid #eee;}
+
+// test
+.order_time {
+    display : -webkit-flex;
+    display : -moz-box;
+    display : -ms-flexbox;
+    display : flex;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+.shop_name {
+    display: block;
+    flex: 1;
+    text-align: right;
+}
+
+/* product_item  */
+.product_item {
+    display : -webkit-flex;
+    display : -moz-box;
+    display : -ms-flexbox;
+    display : flex;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+
+    vertical-align: middle;
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+
+    .product_avater {
+        vertical-align: middle;
+        width: 23%;
+        max-width: 300px;
+        margin-right: 5%;
+    }
+
+    .info_center,
+    .info_right {
+        @include inline-block;
+        -webkit-flex : 1;
+        -moz-box-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        overflow: hidden;
+        vertical-align: middle;
+        width: 35%;
+        color: #000;
+    }
+
+    .info_center .product_name {
+            display: block;
+            font-size: 16px;
+            font-weight: bold;
+    }
+
+    .info_right {
+        text-align: right;
+
+        .sum_price { color: #fe4848; }
+    }
+}
+
+.shop_action {
+    padding: 6px 15px;
+    font-size: 10px;
+
+    // 第一个元素不能是 inline-block
+    a {
+         font-size: 12px;
+        @include border-radius( 4px );
+        vertical-align: middle;
+    }
+
+    .btn_code {
+        border: 1px solid #b5b5b5;
+        padding: .3rem 1.5rem;
+    }
+
+    .btn_in {
+        padding: .3rem 1rem;
+        margin-left: .5rem;
+        background-color: #fe4848;
+        border: 1px solid #fe4848;
+        color: #fff;
+    }
+}
+
+.shop_action.weui_cell:before { display: none;}
+
+[class*= "state_"] { font-weight: bold; }
+.state_done { color: #413e3e; }
+.state_doing { color: #fe4c4c;}

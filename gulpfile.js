@@ -39,12 +39,18 @@ var gulp = require('gulp'),
     }
 
 
-    gulp.task('html', function() {
+    gulp.task('htmlmin', function() {
         return gulp.src('src/templates/*.html')
             .pipe(htmlmin({ collapseWhitespace: true }))
             .pipe(rename( function( path ) {
                 path.basename += '.min';
             }))
+            .pipe(gulp.dest(config.outputdir+'/htmlmin'))
+            .pipe(connect.reload());
+    })
+
+    gulp.task('html', function() {
+        return gulp.src('src/templates/*.html')
             .pipe(gulp.dest(config.outputdir+'/html'))
             .pipe(connect.reload());
     })
@@ -75,6 +81,12 @@ var gulp = require('gulp'),
             .pipe(connect.reload());
      });
 
+     gulp.task('css', function() {
+        return gulp.src('src/css/*.css')
+            .pipe(autoprefixer())
+            .pipe(gulp.dest( config.outputdir + '/css'))
+            .pipe(connect.reload());
+     })
 
      gulp.task('rubySass', function() {
         var rboutputStyle = '',
@@ -134,15 +146,17 @@ var gulp = require('gulp'),
         gulp.watch('src/templates/*.html', ['html']);
         gulp.watch('src/js/*.js', ['js']);
         gulp.watch('src/sass/*.scss', ['rubySass']);
+        // gulp.watch('src/css/*.css', ['css']);
     });
 
     gulp.task('connect', function() {
         connect.server({
             root: [outputDir],
-            port: 8000,
+            port: 8080,
             livereload: true
         });
     });
-
-    gulp.task('default', ['html', 'js', 'rubySass', 'image', 'watch', 'connect']);
+   // image 在 sass 的后面
+    gulp.task('default', ['htmlmin', 'js', 'rubySass', 'watch', 'connect']);
+    //gulp.task('default', ['html', 'js', 'css', 'watch', 'connect']);
 

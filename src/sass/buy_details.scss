@@ -1,0 +1,115 @@
+@import "compass/css3/inline-block";
+@import "compass/css3/box-sizing";
+@import "./wrapBlock";
+$nav_fs: 16px;
+$nav_floatLeft_pad: .5rem;
+$nav_center_marg: $nav_fs/2 + $nav_floatLeft_pad/1rem * 16px;
+
+html {
+    background-color: #e9f1f2;
+}
+
+body { min-width: 277px; }
+
+.order_list {
+    width: 96%;
+    margin: .77em auto;
+    @include border-radius(4px);
+    background-color: #fff;
+    box-shadow:0px 2px 4px rgba(151, 162, 164, 0.45);
+}
+
+
+
+
+/* -- get_code -- */
+.get_code {
+    text-align: center;
+
+    .get_num,
+    .code { margin: .5rem; }
+    .get_num {
+        color: red;
+        font-weight:bold;
+    }
+
+    .code {
+        width: 60%;
+        max-width: 460px;
+    }
+}
+
+    /* -- order_info -- */
+.order_info {
+    margin: 5%;
+
+    h3 {
+        @box-sizing( border-box );
+        border: 1px none #f5dddd;
+        border-style: none none solid none;
+    }
+
+    p {
+        margin: .5rem 0;
+        font-size: 12px ;
+        line-height: 1.5;
+        color: #615B5B;
+    }
+}
+
+/* -- order_shop -- */
+p.order_shop { border: 1px solid #f5dddd; }
+.shop_contact { width: 100%;}
+
+a.product_item { display: block; }
+
+
+
+       /**** 与 order_details 共用开始 ****/
+body { min-width: 270px; }
+/* nav */
+ // 问题 ？？？？？？？？？？？？？？
+.nav_center{ margin-left: - $nav_center_marg; }
+/* product_item  */
+.product_item {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+
+    .product_avater {
+        width: 35%;
+        max-width: 300px;
+        margin-right: 5%;
+    }
+
+    .info_right {
+        overflow: hidden;
+        margin-left: 40%;
+        color: #000;
+
+        .product_name {
+            font-size: 14px;
+            font-weight: bold;
+        }
+    }
+}
+
+/* -- sum -- */
+.sum {
+    @include box-sizing ( border-box );
+    padding: 5px;
+    border-bottom: 1px solid #eee;
+
+    .sum_price {
+        font-size: 16px;
+        color: red;
+    }
+}
+
+.order_shop {
+    @extend .inshop_icon;
+    margin-top: -1px;
+    padding: 5px;
+
+    .inshop_icon { vertical-align: middle; }
+}
+

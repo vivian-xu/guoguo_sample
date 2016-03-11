@@ -4,8 +4,7 @@
 @import "./setOnepx";
 
 /*  content  */
-$shop_name_width: 100%;
-$shop_name_height: 100%;
+$banner_height: 35.6vh;
 $products_name_height: 2.5;
 $_class_title_fs: 16px;
 $product_image_height: auto;
@@ -23,6 +22,15 @@ body {
     text-align: center;
 }
 
+/* banner & name & shop-info */
+.shop-banner {
+    position: relative;
+    max-width: 100vw;
+    height: $banner_height;
+    font-size: 10px;
+    line-height: 1.5;
+}
+
 .shop_identi {
     position: absolute;
     right: 1rem;
@@ -34,13 +42,52 @@ body {
         margin-left: .5rem;
     }
 }
-/* banner & name & shop-info */
-.shop-banner {
-    position: relative;
-    max-width: 100vw;
-    height: 35.6vh;
-    font-size: 10px;
-    line-height: 1.5;
+
+.shop_name {
+    width: 100%;
+    height: $banner_height;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    color: #fff;
+    vertical-align: middle;
+
+    .avater {
+    width: 70px;
+    height: 70px;
+    margin: 3rem 0 0 0;
+    background: rgba( 250, 250, 250, 0.2);
+    border: 1.1vw solid rgba( 250, 250, 250, 0.2);
+    @include inline-block;
+    @include border-radius(999px);
+
+    &:before {
+        content:"";
+        display: inline-block;
+         padding-bottom: 100%;
+        width: .1px;
+        height: 100%;
+        background-color: red;
+        vertical-align: middle;
+      }
+
+    }
+
+    >.name {
+        font-size: 12px;
+    }
+
+    .address {
+        font-size: 10px;
+        height: 20px;
+        line-height: 20px;
+
+        span {
+            @include inline-block;
+            padding: 1px 4px;
+            background-color: rgba( 250, 250, 250, 0.2);
+            @include border-radius(12px);
+        }
+    }
 }
 
 .nav-action {
@@ -59,10 +106,13 @@ body {
     left: 0;
     width: 100%;
     background-color: rgba( 255, 255, 255, 0.1);
+    font-size: 0;
+    //  inline-box  1px 的偏差
 }
 
 .action-item {
     @include inline-block;
+    @include box-sizing( border-box );
     -webkit-flex: 1;
        -moz-box-flex: 1;
         -ms-flex: 1;
@@ -73,10 +123,9 @@ body {
     line-height: 2.4;
     font-size: 12px;
     color: #e5e2e2;
+    width: 50%;
 
-    i {
-        margin-right: .5rem;
-    }
+    i { margin-right: .5rem; }
 
    &:first-child{
         position: relative;
@@ -85,53 +134,6 @@ body {
             @include setRightLine( #e5e2e2 );
             top: 10%;
             height: 80%;
-        }
-    }
-}
-
-
-.shop_name {
-    width: $shop_name_width;
-    height: $shop_name_height;
-    background-color: rgba(0, 0, 0, 0.5);
-    text-align: center;
-    color: #fff;
-
-    > .avater {
-        width: 19.17%;
-        // height: 19.17vw;
-        margin: 1em 0 0 0;
-        background: rgba( 250, 250, 250, 0.2);
-        border: 1.1vw solid rgba( 250, 250, 250, 0.2);
-        @include border-radius(999px);
-
-        display: inline-block;
-        vertical-align: middle;
-
-        &:before {
-            content:"";
-            display: inline-block;
-            padding-bottom: 100%;
-            width: .1px;
-            background-color: red;
-            vertical-align: middle;
-          }
-    }
-
-    >.name {
-        font-size: 12px;
-    }
-
-    .address {
-        font-size: 10px;
-        height: 20px;
-        line-height: 20px;
-
-        span {
-            @include inline-block;
-            padding: 1px 4px;
-            background-color: rgba( 250, 250, 250, 0.2);
-            @include border-radius(12px);
         }
     }
 }
@@ -191,7 +193,6 @@ body {
 }
 
 .products_tag{
-
     text-align: left;
     display: -webkit-flex;
     display: -moz-box;

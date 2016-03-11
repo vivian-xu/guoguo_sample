@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <!--- start : Meta  -->
+    <meta charset="utf-8">
+	<meta name="description" content="果果庄园，店铺, 订单，列表">
+    <!-- start : Mobile Specific  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <!-- end : Mobile Specific  -->
+    <!-- end : Meta -->
+	<title>订单详情</title>
+    <!-- start : css -->
+    <link rel="stylesheet" href="../css/weui.min.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../fonts2/style.css">
+    <link rel="stylesheet" href="../css/buy_details.css">
+    <!-- end : css -->
+    <!-- start: javascript -->
+    <script type="text/javascript" src="../js/libraries/jquery.min.js"></script>
+    <!-- end: javascript -->
+</head>
+<body>
+    <section id="order_details">
+        <div class="wrap_block">
+            <p class="order_num">
+                订单编号: <span class="order_id">123234343254545</span>
+                <span class="state">正在进行</span>
+            </p>
+    	<p class="get_code">
+            提货码 <br/>
+            <span class="get_num"> 2903923029039 </span> <br/>
+            二维码 <br/>
+            <img src="../images/code.jpg" class="code">
+    	</p>
+    	<div class="order_info">
+    		<h3>订单信息</h3>
+    		<p>
+            订单编号: <span class="order_id">123234343254545</span><br/>
+            实付金额: ¥ <span class="order_money"> 6.20 </span><br/>
+            下单时间: <span class="order_time"> 2016-01-23 12 : 00 : 29 </span><br/>
+            订单状态: <span class="order_state"> 已完成 </span>
+    		</p>
+    	</div>
+            <div class="order_products">
+                <a href="product.min.html" class="product_item clearfix">
+                    <img src="../images/products1.jpg" class="product_avater float_left">
+                    <p class="info_right">
+                        <span class="product_name">我是苹果果果</span><br/>
+                        规格 : <span class="">通货</span><br/>
+                        ¥ <span class="price"> 0.6/斤 x 2 </span>
+                    </p>
+                </a>
+                <a href="product.min.html" class="product_item clearfix">
+                    <img src="../images/products1.jpg" class="product_avater float_left">
+                    <p class="info_right">
+                        <span class="product_name">我是苹苹果果果果果果果果果果果果果果果苹果果果果果果果果</span><br/>
+                        规格 : <span class="">通货</span><br/>
+                        ¥ <span class="price"> 0.6/斤 x 2 </span>
+                    </p>
+                </a>
+                <div class="sum clearfix">
+                    <p class="float_right">总计：¥
+                    <span class="sum_price"> 6.20</span></p>
+                </div>
+                <div class="shop_action">
+                    <p class="shop_contact clearfix">
+                        <a href="javascript:void(0);" class="contact_action action_btn weui_btn weui_btn_mini weui_btn_default float_right"> 联系他 </a>
+                        <span> 联系人 : 老王 | 电话 : 188 888 8898</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+<script type="text/javascript" src="../js/nav.min.js"></script>
+</html>
