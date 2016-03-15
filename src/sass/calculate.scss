@@ -1,0 +1,39 @@
+@import "compass/css3/box-sizing";
+@import "compass/css3/border-radius";
+
+$width: 25%;
+$clear-width: 2* 25%;
+html,
+#calcu { width: 100%; }
+.screen {
+	width: 100%;
+	text-align: right;
+	padding: 0 5%;
+}
+.screen,
+.keys button {
+	vertical-align: middle;
+	@include box-sizing( border-box );
+	border: 1px solid #eee;
+	font: normal 25px/2 Arial, sans-serif;
+}
+
+.keys {
+	font-size: 0;
+	button {
+		position: relative;
+		width: $width;
+		@include border-radius( 1px );
+		background-color: #fff;
+		text-align: center;
+		-webkit-user-select: none;
+		   -moz-user-select: none;
+		    -ms-user-select: none;
+		        user-select: none;
+		outline: none;
+
+		&.doubw { width: $clear-width; }
+		&.operators { background-color: #fba01f; }
+		&.btn-top { background-color: #E0E0E0; }
+	}
+}

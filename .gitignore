@@ -3,3 +3,4 @@
 *.map
 *.log
 node_modules/
+*.sublime-project

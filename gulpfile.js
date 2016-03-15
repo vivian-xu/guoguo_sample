@@ -58,6 +58,7 @@ var gulp = require('gulp'),
     gulp.task('js', function() {
         return gulp.src('src/js/*.js')
             .pipe(plumber( { errorHandler: handleErrors() }))
+            .pipe(gulp.dest(config.outputdir+'/js'))
             .pipe(sourcemaps.init({loadMaps: true}))
             .pipe (jsmin())
             .pipe(sourcemaps.write('./'))
