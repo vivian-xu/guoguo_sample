@@ -1,16 +1,10 @@
 @import "compass/css3/inline-block";
 @import "compass/css3/box-sizing";
 @import "./wrapBlock";
+@import "./base";
 $nav_fs: 16px;
 $nav_floatLeft_pad: .5rem;
 $nav_center_marg: $nav_fs/2 + $nav_floatLeft_pad/1rem * 16px;
-
-html {
-    background-color: #e9f1f2;
-}
-
-body { min-width: 277px; }
-
 .order_list {
     width: 96%;
     margin: .77em auto;
@@ -18,9 +12,6 @@ body { min-width: 277px; }
     background-color: #fff;
     box-shadow:0px 2px 4px rgba(151, 162, 164, 0.45);
 }
-
-
-
 
 /* -- get_code -- */
 .get_code {
@@ -62,8 +53,6 @@ p.order_shop { border: 1px solid #f5dddd; }
 .shop_contact { width: 100%;}
 
 a.product_item { display: block; }
-
-
 
        /**** 与 order_details 共用开始 ****/
 body { min-width: 270px; }

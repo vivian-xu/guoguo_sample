@@ -1,123 +1,39 @@
 @import "compass/css3/box-sizing";
 @import "compass/css3/border-radius";
 @import "compass/css3/inline-block";
-
-html {
-    background-color: #e9f1f2;
-}
-
-.order_list {
-    width: 96%;
-    margin: .77em auto;
-    @include border-radius(4px);
-    background-color: #fff;
-    box-shadow:0px 2px 4px rgba(151, 162, 164, 0.45);
-}
-
+@import "./wrapBlock";
+@import "./base";
 // shop
-.come_shop,
-.product_item { padding: 10px 15px;}
 
 .come_shop {
     font-size: 16px;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-align-items: center;
-       -moz-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    vertical-align: middle;
     border-bottom: 1px solid #e9f1f2;
 
-    .shop_name {
-        @include inline-block;
-        -webkit-flex: 1;
-           -moz-box-flex: 1;
-            -ms-flex: 1;
-                flex: 1;
-        -ms-flex-item-align: center;
-            -webkit-align-self: center;
-                align-self: center;
-        vertical-align: middle;
-        width: 80%;
-    }
-
     .shop_head {
-        vertical-align: middle;
+        display: block;
         width: 2.5rem;
         height: 2.5rem;
     }
 }
+
 // product
-.product_item {
-    display : -webkit-flex;
-    display : -moz-box;
-    display : -ms-flexbox;
-    display : flex;
-    -webkit-align-items: center;
-       -moz-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+.info_right {
+    text-align: right;
 
-    vertical-align: middle;
-    background-color: #fff;
-    border-bottom: 1px solid #eee;
+    span { display: block; }
 
-    .product_avater {
+    .current_price {
+        font-size: 16px;
+        color: #ff5454 ;
+    }
+
+    .before_price {
+        text-decoration: line-through;
+        font-size: 12px;
+        color: #626262;
+    }
+    .count_block {
         vertical-align: middle;
-        width: 23%;
-        max-width: 300px;
-        height: 23vw;
-        // height:78px;
-        margin-right: 5%;
-    }
-
-    .info_center,
-    .info_right {
-      overflow: hidden;
-     @include inline-block;
-     vertical-align: middle;
-     width: 35%;
-    }
-
-    .info_center {
-        -webkit-flex : 1;
-          -moz-box-flex: 1;
-             -ms-flex: 1;
-                 flex: 1;
-        color: #000;
-
-        .product_name {
-            display: block;
-            font-size: 16px;
-            font-weight: bold;
-        }
-    }
-
-    .info_right {
-        -webkit-flex : 1;
-          -moz-box-flex: 1;
-             -ms-flex: 1;
-                 flex: 1;
-        text-align: right;
-
-        span { display: block; }
-
-        .current_price {
-            font-size: 16px;
-            color: #ff5454 ;
-        }
-
-        .before_price {
-            text-decoration: line-through;
-            font-size: 12px;
-            color: #626262;
-        }
-        .count_block {
-            vertical-align: middle;
-        }
     }
 }
 
@@ -132,24 +48,24 @@ html {
 
  // input type="text" ,与 input type="btn" 不是中线对奇。 将  type="text " 的 margin-top设定一定的值。
 
+// input text 长度最好固定，要不长度可能太长，挤到别人
 #num_box {
     vertical-align: middle;
     text-align: center;
-    width: 40%;
+    width: 45px;
     margin-top: 5px;
     border: 1px solid rgba( 0, 0, 0, 0.2 );
    @include border-radius( 4px );
 }
-
-
 // form
+
 .weui_cells_title {
     padding-top: .77em;
     color:#000;
     font-size: 16px;
 }
 
-.order_list .weui_label {
+.weui_label {
     color: rgb(65,62,62);
     width: 5em;
 }

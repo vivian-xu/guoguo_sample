@@ -1,0 +1,65 @@
+@import "./wrapBlock";
+
+.focus_time {
+	font-size: 10px;
+	color: #737070;
+
+	.time { font-size: 12px; }
+}
+
+i.fa {
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	margin-top: -6px;  /* font-size的一半*/
+	font-size: 12px;
+	color: #000;
+}
+
+/*  wrap_block  */
+#sell_lists .block_col {
+	vertical-align: middle;
+	padding-right: 28px;
+}
+// dispaly: flex-box , andior 支持，但是flex-item 都必须为block
+.client_info {
+	color: #413e3e;
+	white-space: nowrap;
+ 	font-size: 12px;
+
+	.client_name {
+	    font-size: 16px;
+	    font-weight: bold;
+	}
+}
+img.client_avater {
+	display: block;
+	width: 23%;
+	margin-left: 3px;
+	border-radius: 999px;
+}
+
+
+.client_shopping {
+	position: relative;
+	border-radius: 4px;
+
+	.shopping_lists {
+		text-align: right;
+		-webkit-box-flex: 3; /* 兼容 andior 微信 */
+		-webkit-flex:3;
+		   -moz-box-flex:3;
+		    -ms-flex:3;
+		        flex:3;
+	}
+}
+
+.shopping_title {
+	margin-right: 5px;
+	font-size: 10px;
+}
+
+img.shopping_item {
+	width: 20%;
+	margin-left: 8px;
+}

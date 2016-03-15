@@ -157,6 +157,6 @@ var gulp = require('gulp'),
         });
     });
    // image 在 sass 的后面
-    gulp.task('default', ['htmlmin', 'js', 'rubySass', 'watch', 'connect']);
+    gulp.task('default', ['htmlmin', 'html', 'js', 'rubySass', 'watch', 'connect']);
     //gulp.task('default', ['html', 'js', 'css', 'watch', 'connect']);
 
