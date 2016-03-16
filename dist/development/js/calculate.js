@@ -1,24 +1,24 @@
 $(function() {
 	var _keys = $("#calcu button");
 	var _screen = $("#calcu .screen");
-	var isExp1 = 1;
-	var operators = [];
 
 	keyVal.push(equal);
 	keyVal.push(clear);
 	keyVal.push(back);
+	keyVal.push(last);
 
-
-	_keys.on('click', function() {
+	_keys.on('touchend', function() {
 		var _me = $(this);
 		var _keyVal = _me.data('val');
 		var _screenVal = _screen.val();
+
+		if( _keyVal !== "last" ) { sessionStorage.clear(); }
 
 		function isOperator(obj) {
 			var i = 0;
 			var idx = -1;
 			for (; i<keyVal.length; i++) {
-				if ( obj === keyVal[i].name) {
+				if ( obj === keyVal[i].name ) {
 					var idx = i;
 					break;
 				}
@@ -26,26 +26,6 @@ $(function() {
 			return idx;
 		}
 
-	/*	if (_me.hasClass('operators')) {
-			var i = 0;
-			var idx = -1;
-			for (; i<keyVal.length; i++) {
-				if ( _keyVal === keyVal[i].name) {
-					idx = i;
-					break;
-				}
-			}
-
-			console.log(idx);
-
-			if ( idx > -1 ){
-				_screenVal = keyVal[idx].method(_screenVal);
-			}
-			else {
-				_screenVal = _screenVal + _keyVal;
-			}
-		}
-		*/
 		if ( _me.hasClass('operators') && isOperator(_keyVal)> -1 ) {
 			var index = isOperator(_keyVal);
 			_screenVal = keyVal[index].method(_screenVal);
@@ -53,17 +33,24 @@ $(function() {
 		else {
 			_screenVal = _screenVal + _keyVal;
 		}
-
 		return _screen.val( _screenVal );
 	});
 });
 
 var keyVal = [];
+var temp_count = getLocalStorage().getItem("storage_count");
+var storage_count = temp_count? temp_count : 0;
 
 var equal = {
 	name: "equal",
 	method: function( _val) {
-		return eval(_val);
+		console.log(typeof(storage_count));
+		var key = storage_count %10;
+		var equalVal = eval(_val);
+		getLocalStorage().setItem(key, equalVal);
+		storage_count++;
+		getLocalStorage().setItem("storage_count", storage_count);
+		return equalVal;
 	},
 };
 
@@ -83,3 +70,33 @@ var back = {
 		return _valArray.join("");
 	},
 };
+
+var last = {
+	name: "last",
+	method: function() {
+		var getClick = sessionStorage.getItem("click_count");
+		var temp_count = getLocalStorage().getItem("storage_count");
+		var click_count = ( getClick && getClick < 10 )  ? getClick : 0;
+
+		click_count ++;
+		sessionStorage.click_count = click_count;
+
+		temp_count = ((temp_count - click_count- 1)%10)> -1? (temp_count - click_count- 1)%10 :  0;
+
+		return getLocalStorage().getItem(temp_count);
+	}
+}
+
+
+function getLocalStorage() {
+	if ( typeof localStorage == 'object' ) {
+		return localStorage;
+	}
+	else if ( typeof globalStorage == 'object' ) {
+		return globalStorage[ location.host ];
+	}
+	else {
+		throw new Error( "Local Storage not available. " );
+	}
+}
+

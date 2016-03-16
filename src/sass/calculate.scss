@@ -26,14 +26,29 @@ html,
 		@include border-radius( 1px );
 		background-color: #fff;
 		text-align: center;
+
 		-webkit-user-select: none;
-		   -moz-user-select: none;
-		    -ms-user-select: none;
-		        user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+
+		-webkit-tap-highlight-color:rgba(0,0,0,0);
+		-webkit-tap-highlight:rgba(0,0,0,0);
+		-webkit-text-size-adjust:none;
+		-webkit-appearance:none;
 		outline: none;
 
 		&.doubw { width: $clear-width; }
 		&.operators { background-color: #fba01f; }
-		&.btn-top { background-color: #E0E0E0; }
+		&.btn-top { background-color: #e0e0e0; }
 	}
 }
+
+button:active,
+button.active { background-color: #F1EFEF; }
+
+button.operators:active,
+button.operators.active { background-color: #e88a05; }
+
+button.btn-top:active,
+button.btn-top.active { background-color:#c1c1c1; }
