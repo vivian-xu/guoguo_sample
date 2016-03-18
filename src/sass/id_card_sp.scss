@@ -1,0 +1,71 @@
+@import "compass/css3/box-sizing";
+@import "compass/css3/transform";
+@import "./wrapBlock";
+@import "./base";
+
+#id_card .shop-id {
+    font: 10px/1.5 'MicrosoftYaHeiLight';
+    color: #737070;
+}
+
+#id_card .left_info { margin-right: 5%;}
+#id_card .user-name {
+    vertical-align: middle;
+    font-size: 16px;
+    white-space: nowrap;
+    color: #000;
+
+    img.user-avater {
+        vertical-align: middle;
+        margin-left: 10%;
+        width: 30%;
+        max-width: 90px;
+        border-radius: 999px;
+    }
+}
+
+#id_card .user-info {
+    font-size: 12px;
+    color: #5c5c5c;
+
+    .role { color: #212121; }
+}
+
+#id_card .my-code {
+    max-width: 114px;
+    max-height: 114px;
+}
+
+.logo_block {
+    display: inline-block;
+    width: 28vw;
+    max-width: 164px;
+
+    img.logo {
+        display: block;
+        margin: 5px 0;
+        width: 100%;
+    }
+}
+
+#id_card a {
+    vertical-align: middle;
+    @include border-radius( 4px );
+    font-size: 12px;
+
+    &.btn_share {
+        padding: .3rem 1.5rem;
+        border: 1px solid #b5b5b5;
+    }
+
+    &.btn_in {
+        padding: .3rem 1rem;
+        margin-left: .5rem;
+        border: 1px solid #fe4848;
+        background-color: #fe4848;
+        color: #fff;
+    }
+}
+
+
+

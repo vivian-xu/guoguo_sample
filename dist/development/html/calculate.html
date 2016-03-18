@@ -12,8 +12,8 @@
     <meta content="telephone=no" name="format-detection">
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/weui.min.css">
-    <link rel="stylesheet" href="../css/calculate.css">
     <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.css">
+    <link rel="stylesheet" href="../css/calculate.css">
     <script type="text/javascript" src="../js/libraries/jquery.min.js"></script>
 </head>
 <body>
@@ -21,8 +21,8 @@
         <input type="text" class="screen" value="0"/>
         <div class="keys">
                 <button class="operators btn-top" data-val="clear">C</button>
-                <button class="operators btn-top" data-val="last"> ^ </button>
-                <button class="operators btn-top" data-val="back">  < </button>
+                <button class="operators btn-top" data-val="last"> <i class="fa fa-clock-o"></i> </button>
+                <button class="operators btn-top" data-val="back"> < </button>
                 <button class="operators" data-val="+">+</button>
 
                 <button data-val="7">7</button>
@@ -42,6 +42,16 @@
                 <button class="operators" data-val="equal">=</button>
         </div>
 
+        <div id="actionSheet_wrap">
+            <div class="weui_mask_transition" id="mask"></div>
+            <div class="weui_actionsheet" id="weui_actionsheet">
+                <div class="weui_actionsheet_menu">
+                </div>
+                <div class="weui_actionsheet_action">
+                    <div class="weui_actionsheet_cell" id="actionsheet_cancel">取消</div>
+                </div>
+            </div>
+        </div>
     </section>
 </body>
 <script type="text/javascript" src="../js/calculate.js"></script>

@@ -20,6 +20,7 @@ i.fa {
 #sell_lists .block_col {
 	vertical-align: middle;
 	padding-right: 28px;
+	white-space: nowrap;
 }
 // dispaly: flex-box , andior 支持，但是flex-item 都必须为block
 .client_info {
@@ -32,13 +33,13 @@ i.fa {
 	    font-weight: bold;
 	}
 }
+
 img.client_avater {
 	display: block;
 	width: 23%;
 	margin-left: 3px;
 	border-radius: 999px;
 }
-
 
 .client_shopping {
 	position: relative;
@@ -62,4 +63,8 @@ img.client_avater {
 img.shopping_item {
 	width: 20%;
 	margin-left: 8px;
+}
+
+#calcu #weui_actionsheet a {
+	display: block;
 }
