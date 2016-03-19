@@ -14,7 +14,6 @@ $(function() {
 		var _screenVal = _screen.val();
 
 		if( _keyVal !== "last" ) { sessionStorage.clear(); }
-
 		function isOperator(obj) {
 			var i = 0;
 			var idx = -1;
@@ -29,7 +28,6 @@ $(function() {
 
 		if ( _me.hasClass('operators') && isOperator(_keyVal)> -1 ) {
 			var index = isOperator(_keyVal);
-			console.log( keyVal[index].method);
 			_screenVal = keyVal[index].method(_screenVal);
 		}
 		else {
@@ -46,28 +44,23 @@ var storage_count = temp_count? temp_count : 0;
 var equal = {
 	name: "equal",
 	method: function( _val) {
-		console.log(typeof(storage_count));
 		var key = storage_count %10;
 		var equalVal = eval(_val);
 		getLocalStorage().setItem(key, _val + "=" + equalVal);
 		storage_count++;
 		getLocalStorage().setItem("storage_count", storage_count);
 
-		var calcuHistoryItem = $("#calcu .weui_actionsheet_cell");
+		var calcuHistoryItem = $("#calcu .weui_actionsheet_menu .weui_actionsheet_cell ");
 		var readyItem = _val + "=" + equalVal;
 
-		if( calcuHistoryItem ){
-			calcuHistoryItem.each( function(index, el) {
-				var me = $(this);
-				if (me.data("num") === key ) {
-					me.html(readyItem );
-				}
-			});
+		if ( calcuHistoryItem.length > 9) {
+			// last()选择器，选择匹配元素的最后一项， calcuHIstoryItem[ num ],  andior 不支持， 可能是是因为 calcuHistoryItem 非数组。
+
+			var rmItem = calcuHistoryItem.last();
+			rmItem.remove();
 		}
-		else {
-			creatSheetItem( key, readyItem);
-		}
-		return equalVal;
+		creatSheetItem( readyItem);
+		return(equalVal) ;
 	},
 };
 
@@ -92,18 +85,6 @@ var last = {
 	name: "last",
 	method: function() {
 		lastOut();
-		/*
-		var getClick = sessionStorage.getItem("click_count");
-		var temp_count = getLocalStorage().getItem("storage_count");
-		var click_count = ( getClick && getClick < 10 )  ? getClick : 0;
-
-		click_count ++;
-		sessionStorage.click_count = click_count;
-
-		temp_count = ((temp_count - click_count- 1)%10)> -1? (temp_count - click_count- 1)%10 :  0;
-
-		return getLocalStorage().getItem(temp_count);
-		*/
 	}
 };
 
@@ -121,39 +102,39 @@ function getLocalStorage() {
 
 var  initMenu = function() {
 	var length = getLocalStorage().length;
-	console.log("localStorage.length:" + getLocalStorage().length);
+	// console.log("localStorage.length:" + getLocalStorage().length);
 	for (var i = 0 ; i < length-1; i++) {
 		var locationlist = getLocalStorage().getItem(i);
-		console.log( locationlist );
-		creatSheetItem( i, locationlist );
+		// console.log( locationlist );
+		creatSheetItem( locationlist );
 	};
 }
 
-var creatSheetItem = function( index, obj ) {
-	var newEle = $("<div class='weui_actionsheet_cell'"+"data-num = "+ index +">"+ obj +"</div>");
+var creatSheetItem = function(obj ) {
+	var newEle = $("<div class='weui_actionsheet_cell' " +">"+ obj +"</div>");
 	var calcuList = $("#calcu .weui_actionsheet_menu");
-	calcuList.append(newEle);
+	newEle.prependTo( calcuList );
 }
 
 var lastOut = function () {
-                    var mask = $('#mask');
-                    var weuiActionsheet = $('#weui_actionsheet');
-                    weuiActionsheet.addClass('weui_actionsheet_toggle');
-                    mask.show().addClass('weui_fade_toggle').one('touchend', function () {
-                        hideActionSheet(weuiActionsheet, mask);
-                    });
-                    $('#actionsheet_cancel').one('touchend', function () {
-                        hideActionSheet(weuiActionsheet, mask);
-                    });
-                    weuiActionsheet.unbind('transitionend').unbind('webkitTransitionEnd');
-                }
+	var mask = $('#mask');
+	var weuiActionsheet = $('#weui_actionsheet');
+	weuiActionsheet.addClass('weui_actionsheet_toggle');
+	mask.show().addClass('weui_fade_toggle').one('touchend', function () {
+	    hideActionSheet(weuiActionsheet, mask);
+	});
+	$('#actionsheet_cancel').one('touchend', function () {
+	    hideActionSheet(weuiActionsheet, mask);
+	});
+	weuiActionsheet.unbind('transitionend').unbind('webkitTransitionEnd');
+}
 
-                function hideActionSheet(weuiActionsheet, mask) {
-                    weuiActionsheet.removeClass('weui_actionsheet_toggle');
-                    mask.removeClass('weui_fade_toggle');
-                    weuiActionsheet.on('transitionend', function () {
-                        mask.hide();
-                    }).on('webkitTransitionEnd', function () {
-                        mask.hide();
-                    })
-                }
+function hideActionSheet(weuiActionsheet, mask) {
+    weuiActionsheet.removeClass('weui_actionsheet_toggle');
+    mask.removeClass('weui_fade_toggle');
+    weuiActionsheet.on('transitionend', function () {
+        mask.hide();
+    }).on('webkitTransitionEnd', function () {
+        mask.hide();
+    })
+}
