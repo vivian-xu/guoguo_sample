@@ -3,61 +3,56 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>无标题文档</title>
-<!-- <link href="style/master.css" rel="stylesheet" type="text/css" /> -->
+<link rel="stylesheet" href="../css/index2.css" />
+<link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.css">
 </head>
 <body>
-  <div class="top clearfix">
-    <div class="top_left">
+  <div class="top">
+    <div class="inTop">
       <img src="../images3/BigLogo.png" alt="" class="logo" />
-    </div>
-    <div class="top_right">
-      <a href="" class="login">登录</a>
-      <font>|</font>
-      <a href="">[ 中文版 ]</a>
-      <font>/</font>
-      <a href="">[ ENGLISH ]</a>
-      <font>|</font>
-      <a href="" class="search">search icon</a>
+      <p class="top_right">
+        <a href="" class="login">登录</a>
+        <span>|</span>
+        <a href="">[ 中文版 ]</a>
+        <span>/</span>
+        <a href="">[ ENGLISH ]</a>
+        <span>|</span>
+        <a href="" class="search">search icon</a>
+      </p>
     </div>
   </div>
 
-  <div class="nav">
-    <div class="innav">
-      <ul>
-        <li><a href="#">校园历史</a></li>
+  <nav class="nav">
+    <ul class="innav">
+        <li><a href="#">网站首页</a></li>
         <li><a href="#">学校概况</a></li>
-        <li><a href="#">机构设置</a></li>
-        <li><a href="#">师资力量</a></li>
-        <li><a href="#">招生就业</a></li>
+        <li><a href="#">师资队伍</a></li>
+        <li><a href="#">学科建设</a></li>
         <li><a href="#">教学研究</a></li>
-        <li><a href="#">团队建设</a></li>
-        <li><a href="#">合作交流</a></li>
-        <li><a href="#">校园生活</a></li>
-        <li><a href="#">意见反馈</a></li>
-      </ul>
-    </div class="innav">
-  </div>
+        <li><a href="#">招生就业</a></li>
+        <li><a href="#">党团建设</a></li>
+        <li><a href="#">专题专栏</a></li>
+        <li><a href="#">资料下载</a></li>
+        <li><a href="#">联系我们</a></li>
+    </ul>
+  </nav>
 
   <!-- ban部分 -->
   <div class="vsb-box">
-    <div class="vsb-container a" containerID="1" columns="4">
+    <div class="vsb-container wideBan" containerID="1" columns="4">
       <div class="vsb-space ban1" columns="4">
-        <img src="../images3/ban1.png" alt="" />
       </div>
     </div>
-    <div class="vsb-container a" containerID="1" columns="4">
+    <div class="vsb-container wideBan" containerID="1" columns="4">
       <div class="vsb-space ban2" columns="4">
-        <img src="../images3/ban2.png" alt="" />
       </div>
     </div>
-    <div class="vsb-container a" containerID="1" columns="4">
+    <div class="vsb-container ban" containerID="1" columns="4">
       <div class="vsb-space ban3" columns="4">
-        <img src="../images3/ban3.png" alt="" />
       </div>
     </div>
-    <div class="vsb-container a" containerID="1" columns="4">
+    <div class="vsb-container ban" containerID="1" columns="4">
       <div class="vsb-space ban4" columns="4">
-        <img src="../images3/ban4.png" alt="" />
       </div>
     </div>
   </div>
@@ -68,13 +63,6 @@
   <div class="vsb-container b" containerID="2" columns="4">
     <div class="vsb-space oneMain" columns="4">
       <img src="../images3/b-one-1.png" alt="" />
-      <h1 class="oneTitle"></h1>
-      <p>
-        西安理工大学属中央和陕西省共建、以陕西省管理为主的高校。学校前身是北京机
-        械学院和陕西工业大学于1972年合并组建的陕西机械学院，1994年1月经批准更名为
-        西安理工大学。学校是国家“中西部高等教育振兴计划——中西部高校基础能力建设
-        <span>more</span>
-      </p>
     </div>
   </div>
   <!-- oneMain 完 -->
@@ -82,64 +70,99 @@
   <div class="vsb-container b" containerID="2" columns="4">
     <div class="vsb-space twoMain" columns="4">
       <img src="../images3/b-two-1.png" alt="" />
-      <h1 class="twoMain"></h1>
-      <p><span>icon-more</span></p>
-
+      <div class="twoRight">
+        <h1 class="twoTitle"><span>学院简介</span></h1>
+        <p>
+          西安理工大学属中央和陕西省共建、以陕西省管理为主的高校。学校前身是北京机
+          械学院和陕西工业大学于1972年合并组建的陕西机械学院，1994年1月经批准更名为
+          西安理工大学。学校是国家“中西部高等教育振兴计划——中西部高校基础能力建设
+        </p>
+        <p><span>icon-more</span></p>
+      </div>
     </div>
   </div>
   <!-- twoMain 完 -->
   <!-- threeMain -->
-  <div class="vsb-container b" containerID="2" columns="4">
+  <div class="vsb-container c" containerID="2" columns="4">
     <div class="vsb-space threeMainOne" columns="1">
-      <p class="threeTitle">快速通道</p>
+      <h1 class="threeTitle">快速通道</h1>
     </div>
     <div class="vsb-space threeMainTwo" columns="1">
-      <p class="threeTitle">在线调查</p>
-      <input type="checkbox" />
-      <input type="submit" value="提交" />
+      <h1 class="threeTitle">在线调查</h1>
+      <form class="three2box">
+        <p class="question">对于互联网媒体融合的现象，你对传统媒体持什么态度？</p>
+          <label for="">
+            <input name="1" type="radio" value="" />
+            <span>不关心，对这个不是太了解</span>
+          </label>
+          <br />
+          <label for="">
+            <input name="1" type="radio" value=""/>
+              <span>可有可无，只对其中一种有些许的了解</span>
+          </label>
+          <br />
+          <label for="">
+            <input name="1" type="radio" value=""/>
+            <span>看好新媒体</span>
+          </label>
+          <br />
+          <div class="threeActionBox">
+            <input class="threeAction" type="submit" value="提交" />
+          </div>
+      </form>
     </div>
     <div class="vsb-space threeMainThree" columns="2">
-      <p class="threeTitle">学者社区</p>
-      <ul>
+      <h1 class="threeTitleBox">
+        <a class="threeTPre"><i class="fa fa-angle-left"></i></a>
+        <span class="threeTitle">学者社区</span>
+        <a class="threeTNext"><i class="fa fa-angle-right"></i></a>
+      </h1>
+      <ul class="threeList">
         <li>
           <img src="../images3/b-three-1.png" alt="" />
-          <img src="../images3/b-three-1.png" alt="" />
-          <p><span class="goOn"></span></p>
+          <p>新疆社会科学与界2016年青年学者论坛新疆社会科学与界2016年青年学者论坛新疆社会科学与界2016年青年学者论坛<a class="goOn"><i class="fa fa-arrow-right"></i></a></p>
         </li>
         <li>
-          <p><span class="goOn"></span></p>
+          <img src="../images3/b-three-1.png" alt="" />
+          <p>新疆社会科学与界2016年青年学者论坛新疆社会科学与界2016年青年学者论坛新疆社会科学与界2016年青年学者论坛<a class="goOn"><i class="fa fa-arrow-right"></i></a></p>
         </li>
       </ul>
     </div>
   </div>
-<!-- threeMainwan -->
+<!-- threeMain完 -->
 <!-- fourMain -->
   <div class="vsb-container b" containerID="2" columns="4">
     <div class="vsb-space fourMain" columns="4">
-      <h1 class="threeTitle">热点新闻</h1>
-      <ul>
+      <h1 class="threeTitle">热点新闻
+        <a>更多>></a>
+      </h1>
+      <ul class="fourList clearfix">
         <li>
           <img src="../images3/b-four-1.png" alt="" />
-          <h2>史建平校长在开幕仪式上致辞</h2>
-          <p>很多网站不轻易进行改版升级等操作，主要是担心会影响。有没有什么方变动后，对网站的搜索体验不会有影响呢... <span>[详细]</span>
+          <p class="fourRightInfo">
+            <span class="fourInfoTitle">史建平校长在开幕仪式上致辞</span>
+            很多网站不轻易进行改版升级等操作，主要是担心会影响。有没有什么方变动后，对网站的搜索体验不会有影响呢... <a>[详细]</a>
           </p>
         </li>
         <li>
           <img src="../images3/b-four-1.png" alt="" />
-          <h2>史建平校长在开幕仪式上致辞</h2>
-          <p>很多网站不轻易进行改版升级等操作，主要是担心会影响。有没有什么方变动后，对网站的搜索体验不会有影响呢... <span>[详细]</span>
+          <p class="fourRightInfo">
+            <span class="fourInfoTitle">史建平校长在开幕仪式上致辞</span>
+            很多网站不轻易进行改版升级等操作，主要是担心会影响。有没有什么方变动后，对网站的搜索体验不会有影响呢... <a>[详细]</a>
           </p>
         </li>
         <li>
           <img src="../images3/b-four-1.png" alt="" />
-          <h2>史建平校长在开幕仪式上致辞</h2>
-          <p>很多网站不轻易进行改版升级等操作，主要是担心会影响。有没有什么方变动后，对网站的搜索体验不会有影响呢... <span>[详细]</span>
+          <p class="fourRightInfo">
+            <span class="fourInfoTitle">史建平校长在开幕仪式上致辞</span>
+            很多网站不轻易进行改版升级等操作，主要是担心会影响。有没有什么方变动后，对网站的搜索体验不会有影响呢... <a>[详细]</a>
           </p>
         </li>
         <li>
           <img src="../images3/b-four-1.png" alt="" />
-          <h2>史建平校长在开幕仪式上致辞</h2>
-          <p>很多网站不轻易进行改版升级等操作，主要是担心会影响。有没有什么方变动后，对网站的搜索体验不会有影响呢... <span>[详细]</span>
+          <p class="fourRightInfo">
+            <span class="fourInfoTitle">史建平校长在开幕仪式上致辞</span>
+            很多网站不轻易进行改版升级等操作，主要是担心会影响。有没有什么方变动后，对网站的搜索体验不会有影响呢... <a>[详细]</a>
           </p>
         </li>
       </ul>
@@ -147,22 +170,24 @@
   </div>
   <!-- fourMain完 -->
   <!-- fiveMain -->
-  <div class="vsb-container b" containerID="2" columns="4">
+  <div class="vsb-container c" containerID="2" columns="4">
     <div class="vsb-space fiveMainOne" columns="2">
-      <h1 class="twoTitle">院长致辞
-      <span>更多<font>>></font></span>
+      <h1 class="twoTitle">
+        <span>院长致辞</span>
+        <a>更多>></a>
       </h1>
       <div class="fiveLeft">
-        <img src="" alt="" />
+        <img src="../images3/five-1.png" alt="" />
         <p></p>
       </div>
     </div>
 
     <div class="vsb-space fiveMainTwo" columns="1">
-      <h1 class="twoTitle">网站公告
-        <span>更多<font>>></font></span>
+      <h1 class="twoTitle">
+        <span>网站公告</span>
+        <a>更多>></a>
       </h1>
-      <ul class="twoList">
+      <ul class="fiveList">
         <li><a href="">未来专业的网站策划之路会走向何方</a></li>
         <li><a href="">未来专业的网站策划之路会走向何方</a></li>
         <li><a href="">未来专业的网站策划之路会走向何方</a></li>
@@ -175,36 +200,48 @@
       </ul>
     </div>
     <div class="vsb-space fiveMainThree" columns="1">
-      <h1 class="twoTitle"> 会员登录
-        <span>更多<font>>></font></span>
+      <h1 class="twoTitle">
+        <span> 会员登录</span>
+        <a>更多>></a>
       </h1>
-      <p> 用户名 : <input type="text" /></p>
-      <p> 密&nbsp码 :<input type="text" /></p>
-      <input type="submit" value="登录"/>
-      <input type="submit" value="立即注册"/>
-      <img src="../images3/five-smallBan.png新华网副总裁魏紫川致辞" alt="" class="smallBan" />
+      <div class="fiveMainContent">
+        <p> 用户名 : <input type="text" /></p>
+        <p> 密&nbsp &nbsp码 : <input type="text" /></p>
+        <input class="logIn" type="submit" value="登录"/>
+        <a href="#" class="signIn"> 立即注册 </a>
+      </div>
+      <img src="../images3/five-smallBan.png" alt="" class="smallBan" />
     </div>
   </div>
   <!-- fiveMain完 -->
   <!-- sixMain -->
   <div class="vsb-container b" containerID="2" columns="4">
     <div class="vsb-space sixMain" columns="4">
-      <ul>
+      <h1 class="sixTitle"><span>图片新闻</span></h1>
+      <ul class="clearfix">
         <li>
-          <img src="../images3/b-six-1.png" alt="" />
-          <p>新华网副总裁魏紫川致辞</p>
+          <a href="">
+            <img src="../images3/b-six-1.png" alt="" />
+            <p>新华网副总裁魏紫川致辞</p>
+          </a>
         </li>
         <li>
-          <img src="../images3/b-six-1.png" alt="" />
-          <p>新华网副总裁魏紫川致辞</p>
+          <a href="">
+            <img src="../images3/b-six-1.png" alt="" />
+            <p>新华网副总裁魏紫川致辞</p>
+          </a>
         </li>
         <li>
-          <img src="../images3/b-six-1.png" alt="" />
-          <p>新华网副总裁魏紫川致辞</p>
+          <a href="">
+            <img src="../images3/b-six-1.png" alt="" />
+            <p>新华网副总裁魏紫川致辞</p>
+          </a>
         </li>
         <li>
-          <img src="../images3/b-six-1.png" alt="" />
-          <p>新华网副总裁魏紫川致辞</p>
+          <a href="">
+            <img src="../images3/b-six-1.png" alt="" />
+            <p>新华网副总裁魏紫川致辞</p>
+          </a>
         </li>
       </ul>
     </div>
@@ -219,98 +256,122 @@
   <!-- HF1完 -->
 
   <!-- sevenMain -->
-  <div class="vsb-container b" containerID="2" columns="4">
-    <div class="vsb-space sevenMainOne" columns="4">
-      <h1 class="twoTitle">新闻中心<span>更多<font>>></font></span></h1>
-      <ul>
+  <div class="vsb-container c" containerID="2" columns="4">
+    <div class="vsb-space sevenMainOne" columns="2">
+      <h1 class="sixTitle"><span>新闻中心</span><a href="">更多>></a></h1>
+      <ul class="clearfix">
         <li>
           <img src="../images3/seven-1.png" alt="" />
-            <h3>站长平台推出JS自动推送工具，利于新页面被发现</h3>
-            <p>已推出JS自动推送工具，首先我们大家来认识一下什么叫自动推送工具，这是一种百度站长平台专门...<span>详情</span>
-            </p>
+            <div class="sevenOneLeft">
+              <h3>站长平台推出JS自动推送工具，利于新页面被发现</h3>
+              <p>已推出JS自动推送工具，首先我们大家来认识一下什么叫自动推送工具，这是一种百度站长平台专门...<span>详情</span>
+              </p>
+            </div>
         </li>
         <li>
           <img src="../images3/seven-2.png" alt="" />
-          <h3>站长平台推出JS自动推送工具，利于新页面被发现</h3>
-          <p>已推出JS自动推送工具，首先我们大家来认识一下什么叫自动推送工具，这是一种百度站长平台专门...<span>详情</span>
-          </p>
+          <div class="sevenOneLeft">
+            <h3>站长平台推出JS自动推送工具，利于新页面被发现</h3>
+            <p>已推出JS自动推送工具，首先我们大家来认识一下什么叫自动推送工具，这是一种百度站长平台专门...<span>详情</span>
+            </p>
+          </div>
         </li>
         <li>
           <img src="../images3/seven-3.png" alt="" />
-          <h3>站长平台推出JS自动推送工具，利于新页面被发现</h3>
-          <p>已推出JS自动推送工具，首先我们大家来认识一下什么叫自动推送工具，这是一种百度站长平台专门...<span>详情</span>
-          </p>
+          <div class="sevenOneLeft">
+            <h3>站长平台推出JS自动推送工具，利于新页面被发现</h3>
+            <p>已推出JS自动推送工具，首先我们大家来认识一下什么叫自动推送工具，这是一种百度站长平台专门...<span>详情</span>
+            </p>
+          </div>
         </li>
         <li>
           <img src="../images3/seven-4.png" alt="" />
-          <h3>站长平台推出JS自动推送工具，利于新页面被发现</h3>
-          <p>已推出JS自动推送工具，首先我们大家来认识一下什么叫自动推送工具，这是一种百度站长平台专门...<span>详情</span>
-          </p>
+          <div class="sevenOneLeft">
+            <h3>站长平台推出JS自动推送工具，利于新页面被发现</h3>
+            <p>已推出JS自动推送工具，首先我们大家来认识一下什么叫自动推送工具，这是一种百度站长平台专门...<span>详情</span>
+            </p>
+          </div>
         </li>
       </ul>
     </div>
-    <div class="vsb-space sevenMainTwo" columns="4">
-      <h1 class="twoTitle">热点新闻<span>更多<font>>></font></span></h1>
-      <img src="../images3/seven-5.png" alt="" />
-      <h3>上海体育学院移动版门户全新上线</h3>
-      <p>博达软件新产品在CERNET第二十二届学术年会上反响强烈博达软件新产品在CERNET第二十二 届学术年会上反响强烈。<br />
-        博达软件新产品在CERNET第二十二届学术年会上反响强烈博达软件新产品在CERNET第二十二 届学术年会上反响强烈。<br />
-        博达软件新产品在CERNET第二十二届学术年会上反响强烈博达软件新产品在CERNET第二十二 届学术年会上反响强烈。<br />
-  </p>
+    <div class="vsb-space sevenMainTwo" columns="2">
+      <h1 class="sixTitle"><span>热点新闻</span><a>更多>></a></h1>
+      <div class="sevenTwoContent clearfix">
+        <a href="#">
+          <div class="sevenTLeft">
+            <img src="../images3/seven-5.png" alt="" />
+            <p> 2016/10/23</p>
+          </div>
+          <p class="sevenTRight">
+            <span>上海体育学院移动版门户全新上线</span>
+              博达软件新产品在CERNET第二十二届学术年会上反响强烈博达软件新产品在CERNET第二十二 届学术年会上反响强烈。<br />
+              博达软件新产品在CERNET第二十二届学术年会上反响强烈博达软件新产品在CERNET第二十二 届学术年会上反响强烈。<br />
+              博达软件新产品在CERNET第二十二届学术年会上反响强烈博达软件新产品在CERNET第二十二 届学术年会上反响强烈。
+          </p>
+        </a>
+    </div>
     </div>
   </div>
   <!-- sevenMain完 -->
   <!-- eightMain -->
   <div class="vsb-container b" containerID="2" columns="4">
     <div class="vsb-space eightMain" columns="4">
-      <h1 class="oneTitle">教学科研<span>更多<font>>></font></span></h1>
+      <h1 class="sixTitle"><span>教学科研</span><a href="">更多>></a></h1>
       <ul>
         <li>
-          <img src="../images3/eight-1.png" alt="" />
-          <p>研讨会的主要内容研讨会的主要内容研讨会的主要内容研讨会的主要内容研讨会的主要内容研讨会的主要内容...</p>
+          <a href="#">
+            <img src="../images3/eight-1.png" alt="" />
+            <p>研讨会的主要内容研讨会的主要内容研讨会的主要内容研讨会的主要内容研讨会的主要内容研讨会的主要内容...</p>
+          </a>
         </li>
         <li>
-          <img src="../images3/eight-1.png" alt="" />
-          <p>研讨会的主要内容研讨会的主要内容研讨会的主要内容研讨会的主要内容研讨会的主要内容研讨会的主要内容...</p>
+          <a href="#">
+            <img src="../images3/eight-1.png" alt="" />
+            <p>研讨会的主要内容研讨会的主要内容研讨会的主要内容研讨会的主要内容研讨会的主要内容研讨会的主要内容...</p>
+          </a>
         </li>
         <li>
-          <img src="../images3/eight-1.png" alt="" />
-          <p>研讨会的主要内容研讨会的主要内容研讨会的主要内容研讨会的主要内容研讨会的主要内容研讨会的主要内容...</p>
+          <a href="#">
+            <img src="../images3/eight-1.png" alt="" />
+            <p>研讨会的主要内容研讨会的主要内容研讨会的主要内容研讨会的主要内容研讨会的主要内容研讨会的主要内容...</p>
+          </a>
         </li>
         <li>
-          <img src="../images3/eight-1.png" alt="" />
-          <p>研讨会的主要内容研讨会的主要内容研讨会的主要内容研讨会的主要内容研讨会的主要内容研讨会的主要内容...</p>
+          <a href="#">
+            <img src="../images3/eight-1.png" alt="" />
+            <p>研讨会的主要内容研讨会的主要内容研讨会的主要内容研讨会的主要内容研讨会的主要内容研讨会的主要内容...</p>
+          </a>
         </li>
       </ul>
     </div>
   </div>
   <!-- eightMain完 -->
   <!-- nineMain -->
-  <div class="vsb-container b" containerID="2" columns="4">
-    <div class="vsb-space nineMainOne" columns="4">
-      <h1 class="oneTitle"><span>校内新闻</span><span>校外新闻</span></h1>
+  <div class="vsb-container c" containerID="2" columns="4">
+    <div class="vsb-space nineMainOne" columns="3">
+      <h1 class="nineTitle"><span class="firstTitle">校内新闻</span><span class="nextTitle">校外新闻</span></h1>
       <div class="nineImg">
         <img src="../images3/nine-1.png" alt="" />
-        <p><span>详情</span></p>
+        <p>研讨会的主要内容研讨会的主要内容研讨会的主要内容研讨会的主要内容研讨会的主要内容...<span>［详情］</span></p>
       </div>
       <ul class="nineList">
-        <li class="nineItem"><a href="#">北京大学举办教学研讨会<span>2016/01/02</span></a></li>
-        <li class="nineItem"><a href="#">北京大学举办教学研讨会<span>2016/01/02</span></a></li>
-        <li class="nineItem"><a href="#">北京大学举办教学研讨会<span>2016/01/02</span></a></li>
-        <li class="nineItem"><a href="#">北京大学举办教学研讨会<span>2016/01/02</span></a></li>
-        <li class="nineItem"><a href="#">北京大学举办教学研讨会<span>2016/01/02</span></a></li>
-        <li class="nineItem"><a href="#">北京大学举办教学研讨会<span>2016/01/02</span></a></li>
-        <li class="nineItem"><a href="#">北京大学举办教学研讨会<span>2016/01/02</span></a></li>
-        <li class="nineItem"><a href="#">北京大学举办教学研讨会<span>2016/01/02</span></a></li>
-        <li class="nineItem"><a href="#">北京大学举办教学研讨会<span>2016/01/02</span></a></li>
-        <li class="nineItem"><a href="#">北京大学举办教学研讨会<span>2016/01/02</span></a></li>
-        <li class="nineItem"><a href="#">北京大学举办教学研讨会<span>2016/01/02</span></a></li>
-        <li class="nineItem"><a href="#">北京大学举办教学研讨会<span>2016/01/02</span></a></li>
+        <li><a href="#">北京大学举办教学研讨会<span>2016/01/02</span></a></li>
+        <li><a href="#">北京大学举办教学研讨会<span>2016/01/02</span></a></li>
+        <li><a href="#">北京大学举办教学研讨会<span>2016/01/02</span></a></li>
+        <li><a href="#">北京大学举办教学研讨会<span>2016/01/02</span></a></li>
+        <li><a href="#">北京大学举办教学研讨会<span>2016/01/02</span></a></li>
+        <li><a href="#">北京大学举办教学研讨会<span>2016/01/02</span></a></li>
+        <li><a href="#">北京大学举办教学研讨会<span>2016/01/02</span></a></li>
+        <li><a href="#">北京大学举办教学研讨会<span>2016/01/02</span></a></li>
+        <li><a href="#">北京大学举办教学研讨会<span>2016/01/02</span></a></li>
+        <li><a href="#">北京大学举办教学研讨会<span>2016/01/02</span></a></li>
+        <li><a href="#">北京大学举办教学研讨会<span>2016/01/02</span></a></li>
+        <li><a href="#">北京大学举办教学研讨会<span>2016/01/02</span></a></li>
       </ul>
     </div>
-    <div class="vsb-space nineMainTwo" columns="3">
-      <h1 class="oneTitle">精品课程</h1>
-      <ul class="nineList">
+    <div class="vsb-space nineMainTwo" columns="1">
+      <h1 class="nineTitle"><span class="firstTitle">精品课程</span></h1>
+      <ul class="fiveList">
         <li><a href="">未来专业网站等</a></li>
         <li><a href="">未来专业网站等</a></li>
         <li><a href="">未来专业网站等</a></li>
@@ -331,16 +392,19 @@
   <!-- tenMain -->
   <div class="vsb-container b" containerID="2" columns="4">
     <div class="vsb-space tenMain" columns="4">
-      <h1 class="oneTitle">友情链接</h1>
-      <ul class="TenLinkList">
+      <h1 class="nineTitle"><span class="firstTitle">友情链接</span></h1>
+      <ul class="TenLinkList clearfix">
         <li class="TenLink"><a href=""><img src="../images3/beidaLogo.png" alt="" /></a></li>
         <li class="TenLink"><a href=""><img src="../images3/beidaLogo.png" alt="" /></a></li>
         <li class="TenLink"><a href=""><img src="../images3/beidaLogo.png" alt="" /></a></li>
         <li class="TenLink"><a href=""><img src="../images3/beidaLogo.png" alt="" /></a></li>
         <li class="TenLink"><a href=""><img src="../images3/beidaLogo.png" alt="" /></a></li>
       </ul>
-      <input type="submit" class="TenAction" value="<"/>
-      <input type="submit" class="TenAction" value=">"/>
+      <div class="ten-btns">
+        <a class="ten-left" /><i class="fa fa-chevron-left"></i></a>
+        <a class="ten-right" /><i class="fa fa-chevron-right"></i></a>
+      </div>
+
     </div>
   </div>
 </div>

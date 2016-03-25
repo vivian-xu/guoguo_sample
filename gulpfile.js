@@ -93,7 +93,7 @@ var gulp = require('gulp'),
         var rboutputStyle = '',
             rbname = '';
         if (env === "development") {
-            rboutputStyle = '';
+            rboutputStyle = 'compact';
             rbrename = "";
         }
 

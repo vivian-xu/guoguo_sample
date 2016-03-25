@@ -1,0 +1,876 @@
+html, body, div, span , h1, h2, h3, p, strong, var,
+b, i,dl, dt, dd, ol, ul, li, form, label, tr, th, td,
+footer, header, nav, section {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+html {
+    font: 16px/24px MicrosoftYaHei-Bold,Tahoma,Verdana,Arial,sans-serif;
+}
+
+html, body {
+    width: 100%;
+}
+body {
+    height: 2;
+    line-height: 2;
+    font-size: 14px;
+    color: #2d2d2d;
+}
+
+:focus {
+    outline: 1;
+}
+
+footer,header,nav,section {
+    display:block;
+}
+
+ul,
+nav ul {
+    list-style:none;
+}
+
+a,
+button,
+input {
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+    -webkit-tap-highlight:rgba(0,0,0,0);
+    -webkit-text-size-adjust:none;
+    outline: none;
+    padding: 0;
+}
+
+a {
+    margin:0;
+    padding:0;
+    border:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+    text-decoration: none;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+.clearfix:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.clearfix {
+    zoom:1;
+}
+
+// 全局部分
+a {
+    color: #2d2d2d;
+}
+
+form {
+    box-sizing: border-box;
+}
+
+
+@for $i from 1 through 4 {
+    .vsb-container[columns='#{$i}' ] {
+        width: 295px * $i + 20px;
+        margin: auto;
+    }
+    .b.vsb-container .vsb-space[columns='#{$i}'] {
+        width:  295px * $i ;
+    }
+    .c.vsb-container .vsb-space[columns='#{$i}' ] {
+        width: 300px * $i;
+    }
+}
+
+
+.vsb-space {
+    margin: 40px auto;
+    float: left;
+    overflow: hidden;
+    padding: 0 10px;
+}
+
+[class*="ban"] .vsb-space {
+    float: none;
+}
+
+/* 一个 container 下有多个 space 时 设置。*/
+.c .vsb-space {
+    box-sizing: border-box;
+}
+
+// TItle部分
+
+.twoTitle,
+.threeTitle,
+.nineTitle {
+    box-sizing: border-box;
+    width: 100%;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.twoTitle a,
+.threeTitle a,
+.sixTitle a {
+    float: right;
+    height: 30px;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+
+.twoTitle {
+    height: 34px;
+    line-height: 34px;
+    margin-bottom: 26px;
+    border-bottom: 2px #BAB6B3 solid;
+    color: #fff;
+
+    span {
+        display: inline-block;
+        width: 91px;
+        height: 34px;
+        text-align: center;
+        background-color: #0E8289;
+    }
+
+    a {
+        color: #727272;
+        font-size: 14px;
+    }
+}
+
+.threeTitle {
+    height: 45px;
+    line-height: 45px;
+    padding: 0 17px;
+    margin-bottom: 29px;
+    background-color: #0e8289;
+    color: #fefefe;
+
+    a {
+        color: #eaeaea;
+    }
+}
+
+.sixTitle {
+    position: relative;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    margin-bottom: 25px;
+    font-size: 18px;
+    color: #252525;
+    border-bottom: 2px solid #d0d0d0;
+
+    span{
+        border-bottom: 8px solid #E27433;
+    }
+    a {
+        color: #666;
+    }
+}
+
+
+.nineTitle {
+    height: 34px;
+    line-height: 34px;
+    margin-bottom: 26px;
+    border-bottom: 2px #E27433 solid;
+    color: #fff;
+
+    .firstTitle,
+    .nextTitle {
+        display: inline-block;
+        width: 98px;
+        height: 34px;
+        text-align: center;
+    }
+
+    .firstTitle {
+        border-radius: 10px 10px 0 0;
+        background-color: #0E8289;
+    }
+
+    .nextTitle {
+        color: #6B6B6B;
+    }
+
+    a {
+        color: #727272;
+        font-size: 14px;
+    }
+}
+/* top部分 */
+.top {
+    width: 100%;
+    line-height: 29px;
+    padding: 62px 0 40px 0;
+    background-color: #fff;
+    border-bottom: 2px solid #088184;
+
+    .inTop {
+        position: relative;
+        width: 1180px;
+        margin: 0 auto;
+
+        span,
+        a {
+            font-size: 14px;
+            color: #757575;
+        }
+    }
+
+    .top_right {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+}
+
+.nav,
+.innav,
+.innav ul li {
+    height: 37px;
+}
+
+.nav {
+    width: 100%;
+    height: 45px;
+    background-color: #fff;
+}
+
+ul.innav {
+    width: 1180px;
+    margin: 0 auto;
+
+    li {
+        width: 118px;
+        line-height: 37px;
+        display: block;
+        float: left;
+        list-style: none;
+        text-align: center;
+
+        a {
+            display: block;
+            font-size: 16px;
+            color: #494949;
+
+            &:hover,
+            &:active,
+            &.active {
+                background: #e27433;
+                color: #fff;
+                border: 1px solid #e96c4a;
+            }
+        }
+    }
+}
+
+/* ban部分 */
+.a,
+.b {
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.ban1 {
+    background: #fff url(../images3/ban1.png) no-repeat center ;
+}
+.ban2 {
+    background: #fff url(../images3/ban2.png) no-repeat center ;
+}
+.ban3 {
+    background: #fff url(../images3/ban3.png) no-repeat center ;
+}
+.ban4 {
+    background: #fff url(../images3/ban4.png) no-repeat center ;
+}
+
+.ban1 { height: 563px; }
+.ban2 { height: 523px; }
+.ban3 { height: 423px; }
+.ban4 { height: 419px; }
+
+.vsb-container.wideBan,
+.wideBan .ban1,
+.wideBan .ban2 {
+    width: 100%;
+}
+
+// oneMain部分
+
+// twoMain部分
+.twoMain {
+    width: 1180px;
+    height: 262px;
+    overflow: hidden;
+    font-size: 0;
+
+    img {
+        width: 582px;
+        height: 262px;
+    }
+}
+
+.twoRight {
+    width: 571px;
+    line-height: 31px;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 14px;
+    color: #333;
+}
+
+// threeMain部分
+.threeMainOne,
+.threeMainTwo {
+    width: 295px;
+}
+
+.threeMainThree {
+    width: 590px;
+}
+
+.three2box {
+    width: 100%;
+    height: 302px;
+    padding: 21px 15px;
+    border: 3px #0e8289 solid;
+
+    .question {
+        margin-bottom: 30px;
+    }
+
+    label span {
+        display: inline-block;
+        width: 210px;
+        vertical-align: top;
+    }
+
+    .threeActionBox {
+        text-align: center;
+    }
+
+    .threeAction {
+        width: 225px;
+        height: 40px;
+        margin-top: 28px;
+        color: #fff;
+        font-size: 14px;
+        line-height: 40px;
+        background-color: #e27433;
+        border-style: none;
+        border-radius: 4px;
+    }
+}
+
+/* threeMainThree */
+
+// icon 设置
+.threeMainThree {
+    .goOn,
+    .threeTPre,
+    .threeTNext {
+        display: inline-block;
+        text-align: center;
+        background-color: #e27433;
+        color: #fff;
+    }
+
+    .threeTPre,
+    .threeTNext {
+        width: 29px;
+        height: 29px;
+        font-size: 30px;
+    }
+
+    .goOn {
+        width: 41px;
+        padding: 5px 0;
+        margin-left: 8px;
+        line-height: 26px;
+        vertical-align: middle;
+     }
+}
+
+.threeTitleBox {
+    text-align: center;
+    font-size: 0;
+
+    span {
+        display: inline-block;
+    }
+
+    .threeTitle {
+        width: 429px;
+        text-align: center;
+        margin: 0 34px 29px;
+    }
+}
+
+.threeMainThree {
+
+    .threeList {
+        height: 299px;
+        text-align: center;
+        border-bottom: 4px #e27433 solid;
+
+    }
+    .threeList li {
+        display: inline-block;
+        width: 281px;
+
+        p {
+            line-height: 24px;
+            margin: 15px 0;
+            font-size: 14px;
+            color: #333;
+        }
+    }
+}
+
+// fourMain部分
+
+.fourMain .threeTitle {
+    margin-bottom: 0;
+}
+
+.fourList {
+    li {
+        width: 580px;
+        float: left;
+        overflow: hidden;
+        padding: 19px 0;
+        border-bottom: 2px dotted #cfd4d4 ;
+        font-size: 0;
+
+        .fourRightInfo {
+            width: 280px;
+            display: inline-block;
+            vertical-align: top;
+            font-size: 14px;
+
+            a {
+                display: block;
+            }
+
+        }
+
+        .fourInfoTitle {
+            position: relative;
+            display: block;
+            font-size: 18px;
+            color: #252525;
+
+            &:before {
+                width: 40px;
+                height: 5px;
+                position: absolute;
+                display: block;
+                content: "";
+                background-color: #e27433;
+            }
+        }
+    }
+     img {
+        width: 282px;
+        height: 180px;
+        overflow: hidden;
+        margin-right: 18px;
+    }
+}
+.fiveRightList {
+    a {
+        display: block;
+        height: 36px;
+    }
+    a span{ float: right; }
+}
+
+
+.HF1 img {
+    width: 100%;
+}
+
+.fourMain {
+    height: 488px;
+}
+.fourLeftImg {
+    width: 755px;
+    float: left;
+    margin-right: 30px;
+}
+
+.fourRight {
+    .fourTitle {
+        height: 50px;
+        line-height: 50px;
+        font-size: 16px;
+
+    }
+}
+
+// fiveMain部分
+.fiveMainOne .fiveLeft {
+    overflow: hidden;
+    img {
+        width: 570px;
+    }
+}
+
+.fiveList {
+    li {
+        position: relative;
+
+        &:before {
+            position: absolute;
+            top: 50%;
+            left: 2px;
+            margin-top: -4px;
+            display: block;
+            content: "";
+            width: 7px;
+            height: 7px;
+            background-color: #e27433;
+        }
+    }
+    a {
+        margin-left: 20px;
+    }
+}
+
+.fiveMainThree {
+
+    .fiveMainContent {
+        text-align: right;
+    }
+    input[type="text"] {
+        width: 171px;
+        height: 32px;
+        margin-right: 30px;
+        border: 1px  solid #e27433;
+    }
+
+    p {
+        margin-bottom: 15px;
+    }
+
+    .logIn {
+        width: 86px;
+        height: 31px;
+        font-size: 18px;
+        background-color: #e27433;
+        color: #fff;
+        border-style: none;
+    }
+
+    .signIn {
+        margin: 0 30px 0 15px;
+        background-color: #fff;
+        border-style: none;
+        font-size: 14px;
+        color: #333;
+    }
+
+    img {
+        width: 281px;
+        height: 100px;
+        display: block;
+        margin-top: 35px;
+    }
+}
+// sixMain部分
+
+.sixMain {
+
+    li {
+        float: left;
+        text-align: center;
+
+        &:not(:last-child) {
+            margin-right: 12px;
+        }
+    }
+    img {
+        width: 281px;
+        height: 244px;
+    }
+    p {
+        font-size: 14px;
+        color: #333;
+        height: 30px;
+
+    }
+}
+.sixMain a {
+    display: inline-block;
+    height: 71px;
+    padding: 0 20px;
+    margin: 20px 0 25px;
+    &:not(:last-child){
+        border-right: 3px solid #e9e9e9;
+    }
+    &:first-child { padding-left: 0;}
+    &:last-child { padding-right: 0;}
+}
+
+.sixMainContent {
+    border-bottom: 11px solid #72d1fe;
+}
+
+
+// HF1
+.HF2 img {
+    width: 1170px;
+}
+// sevenMain
+
+ .sevenMainOne li {
+    float: left;
+
+    img {
+        width: 100px;
+        height: 81px;
+    }
+    .sevenOneLeft {
+        display: inline-block;
+        width: 180px;
+    }
+
+ }
+// .sevenMainTwo
+ .sevenTwoContent {
+    height: 273px;
+    padding: 26px 84px;
+    border: 3px solid #cfd4d4;
+
+ }
+
+ .sevenTLeft {
+    float: left;
+
+    img {
+        width: 145px;
+        height: 185px;
+    }
+
+ }
+ .sevenTRight {
+    line-height: 24px;
+    height: 24px;
+    margin: -5px 0 0 155px;
+    font-size: 12px;
+
+    span {
+        display: block;
+        height: 24px;
+        line-height: 24px;
+        margin-bottom: 10px;
+        font-size: 14px;
+        font-weight: bold;
+        color: #088184;
+    }
+
+ }
+
+// eightMain
+.eightMain {
+    li {
+        width: 280px;
+        float: left;
+        &:not(:first-child) {
+            margin-left: 12px;
+        }
+    }
+}
+
+// nineMain部分
+.nineImg,
+.nineList {
+    height: 185px;
+    overflow: hidden;
+}
+.nineImg {
+    width: 280px;
+    float: left;
+    img {
+        height: 134px;
+    }
+    p {
+        height: 24px;
+        color: #333;
+        font-size: 12px;
+        line-height: 24px;
+        span {
+            color: #e27433;
+        }
+    }
+}
+.nineList li {
+    float: left;
+    width: 280px;
+    margin-left: 20px;
+    font-size: 14px;
+    color: #252525;
+    line-height: 30px;
+
+    span {
+        float: right;
+        font-size: 12px;
+
+    }
+}
+.nineMainTwo .fiveList a{
+    margin-left: 30px;
+}
+
+
+// 友情链接 tenMain
+.TenLinkList {
+    display: inline-block;
+    padding: 10px 5px;
+    vertical-align: middle;
+    border: 1px #aaabb2 solid;
+
+    li {
+        float: left;
+        width: 180px;
+        margin-right: 5px;
+        text-align: center;
+        border: 1px #eee solid;
+        a {
+            display: block;
+            width: 100%;
+        }
+    }
+}
+.ten-btns {
+    display: inline-block;
+    width: 196px;
+
+    a{
+        display: inline-block;
+        width: 70px;
+        padding: 10px 10px;
+        font-size: 30px;
+        text-align: center;
+        vertical-align: middle;
+        border: 1px #aaabb2 solid;
+        color: #fff;
+
+        .ten-left {
+            background-color: #aeaeae;
+        }
+        .ten-right {
+            background-color: #e27433;
+        }
+    }
+}
+// tail部分
+.tail {
+    background: url(../images2/1_tail_bg.jpg) no-repeat center;
+    background-size: cover;
+    padding: 65px 0;
+    margin-top: 30px;
+
+    .innerTail {
+        width: 1180px;
+        margin: 0 auto;
+        color: #fff;
+        font-size: 0;
+    }
+}
+
+.tailLeft,
+.tailCenter,
+.tailRight {
+    display: inline-block;
+    height: 168px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.tailLeft {
+    width: 185px *2;
+    font-size: 0;
+
+    a {
+        display: inline-block;
+        box-sizing: border-box;
+        width: 50%;
+        text-align: center;
+        font-size: 14px;
+        color: #fff;
+        border-right: 2px solid rgba(225,225,225, 0.4);
+    }
+}
+
+.tailCenter {
+    width: 427px;
+    border-right: 2px solid rgba(225,225,225, 0.4);
+
+    &:before {
+        display: inline-block;
+        content: "";
+        width: .1px;
+        height: 168px;
+        vertical-align: middle;
+        margin-left: -.1px;
+    }
+
+    img {
+        vertical-align: middle;
+    }
+}
+
+.tailRight {
+    padding-top: 10px;
+    margin-left: 65px;
+    font-size: 14px;
+    text-align: left;
+
+    h3 {
+        font-size: 18px;
+    }
+}
+// tail完
+
+// 链接，button 等的 hover
+a:hover,
+a:active {
+    color: blue;
+}
+
+.top .inTop a,
+.oneTitle a,
+.twoTitle a {
+    &:hover,
+    &:active {
+        color: #000;
+    }
+}
+
+.twoLeft2 input.signin:hover,
+.twoLeft2 input.signin:active {
+    background-color: #eee;
+}
+.twoLeft2 input.login:hover,
+.twoLeft2 input.login:active {
+    background-color: #e03c3c;
+}
+

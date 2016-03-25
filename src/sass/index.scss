@@ -1,3 +1,4 @@
+/* reset 部分*/
 html, body, div, span , h1, h2, h3, p, strong, var,
 b, i,dl, dt, dd, ol, ul, li, form, label, tr, th, td,
 footer, header, nav, section {
@@ -72,7 +73,7 @@ input, select {
     zoom:1;
 }
 
-// 全局部分
+/* 全局部分 */
 a {
     color: #2d2d2d;
 }
@@ -94,7 +95,7 @@ div,input {
     padding-right: 10px;
 }
 
-// top部分
+/* top部分 */
 .top {
     width: 100%;
     height: 29px;
@@ -165,8 +166,7 @@ div,input {
     }
 }
 
-
-// ban部分
+ /*ban部分 */
 .a,
 .b {
     margin: 0 auto;
@@ -190,7 +190,7 @@ div,input {
     height: 478px;
 }
 
-// oneMain部分
+/*oneMain部分 */
 .oneList {
     width: 100%;
     height: 233px;
@@ -223,12 +223,10 @@ div,input {
         color: #727272;
         font-size: 14px;
         font-weight: normal;
-
-
     }
 }
 
-// twoMain部分
+/*twoMain部分 */
 .twoLeft,
 .twoRight {
     height: 556px;
@@ -236,7 +234,7 @@ div,input {
     overflow: hidden;
 }
 
-// twoLeft部分
+/* twoLeft部分 */
 .twoTitle {
     height: 31px;
     line-height: 31px;
@@ -338,7 +336,6 @@ div,input {
         line-height: 22px;
         min-height: 44px;
     }
-
 }
 
 .twoImg.vsb-space {
@@ -347,11 +344,10 @@ div,input {
     img {
         width: 883px;
         height: 517px;
-
     }
 }
 
-// threeMain部分
+/* threeMain部分 */
 .threeListImg,
 .threeLeftList ul {
     float: left;
@@ -401,10 +397,9 @@ div,input {
         text-align: center;
         color: #fff;
     }
-
 }
 
-// fourMain部分
+/* fourMain部分 */
 .fourMain {
     height: 488px;
 }
@@ -423,7 +418,7 @@ div,input {
     }
 }
 
-// fiveMain部分
+/* fiveMain部分 */
 .fiveLeftImg {
     float: left;
     width: 281px;
@@ -444,7 +439,7 @@ div,input {
     width: 100%;
 }
 
-// sixMain部分
+/* sixMain部分 */
 .sixMain a {
     display: inline-block;
     height: 71px;
@@ -464,7 +459,7 @@ div,input {
     border-bottom: 11px solid #72d1fe;
 }
 
-// tail部分
+/* tail部分 */
 .tail {
     background: url(../images2/1_tail_bg.jpg) no-repeat center;
     background-size: cover;
@@ -531,9 +526,9 @@ div,input {
         font-size: 18px;
     }
 }
-// tail完
+/* tail完 */
 
-// 链接，button 等的 hover
+/* 链接，button 等的 hover */
 a:hover,
 a:active {
     color: blue;
